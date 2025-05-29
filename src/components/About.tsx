@@ -4,7 +4,7 @@ import { User, Target, Code } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-primary mb-16">
           About <span className="text-accent">Me</span>
@@ -12,10 +12,10 @@ const About = () => {
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="apple-card p-8 rounded-15">
+            <div className="bg-white p-8 rounded-15 shadow-lg cert-card">
               <div className="flex items-start space-x-4">
-                <div className="bg-black/5 p-3 rounded-15">
-                  <User className="text-black/60" size={24} />
+                <div className="bg-accent p-3 rounded-15">
+                  <User className="text-white" size={24} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-3">Who I Am</h3>
@@ -26,10 +26,10 @@ const About = () => {
               </div>
             </div>
 
-            <div className="apple-card p-8 rounded-15">
+            <div className="bg-white p-8 rounded-15 shadow-lg cert-card">
               <div className="flex items-start space-x-4">
-                <div className="bg-black/5 p-3 rounded-15">
-                  <Target className="text-black/60" size={24} />
+                <div className="bg-accent p-3 rounded-15">
+                  <Target className="text-white" size={24} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-primary mb-3">My Goal</h3>
@@ -41,10 +41,10 @@ const About = () => {
             </div>
           </div>
 
-          <div className="apple-card p-8 rounded-15">
+          <div className="bg-white p-8 rounded-15 shadow-lg cert-card">
             <div className="flex items-start space-x-4 mb-6">
-              <div className="bg-black/5 p-3 rounded-15">
-                <Code className="text-black/60" size={24} />
+              <div className="bg-accent p-3 rounded-15">
+                <Code className="text-white" size={24} />
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-primary">My Journey</h3>

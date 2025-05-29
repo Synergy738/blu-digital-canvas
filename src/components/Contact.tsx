@@ -67,7 +67,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-secondary">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-primary mb-16">
           Get In <span className="text-accent">Touch</span>
@@ -90,9 +90,9 @@ const Contact = () => {
                   href={info.href}
                   target={info.href.startsWith('http') ? '_blank' : undefined}
                   rel={info.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="apple-card p-4 rounded-15 flex items-center space-x-4"
+                  className="cert-card bg-white p-4 rounded-15 shadow-lg flex items-center space-x-4 hover:scale-105 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-black rounded-15 flex items-center justify-center">
+                  <div className="w-12 h-12 bg-accent rounded-15 flex items-center justify-center">
                     {info.icon}
                   </div>
                   <div>
@@ -105,7 +105,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="apple-card p-8 rounded-15">
+          <div className="bg-white p-8 rounded-15 shadow-lg">
             <h3 className="text-2xl font-bold text-primary mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
@@ -117,7 +117,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="mt-1 bg-black/5 border-black/10"
+                    className="mt-1"
                   />
                 </div>
                 <div>
@@ -129,7 +129,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="mt-1 bg-black/5 border-black/10"
+                    className="mt-1"
                   />
                 </div>
               </div>
@@ -142,7 +142,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="mt-1 bg-black/5 border-black/10"
+                  className="mt-1"
                 />
               </div>
               
@@ -155,14 +155,14 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="mt-1 bg-black/5 border-black/10"
+                  className="mt-1"
                 />
               </div>
               
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-black hover:bg-black/80 text-white py-3 rounded-15 flex items-center justify-center space-x-2 transition-all duration-300"
+                className="w-full bg-accent hover:bg-blue-600 text-white py-3 rounded-15 flex items-center justify-center space-x-2 transition-all duration-300"
               >
                 {isSubmitting ? (
                   <>
