@@ -30,11 +30,11 @@ export default {
 					foreground: '#ffffff'
 				},
 				secondary: {
-					DEFAULT: '#f5f5f7',
-					foreground: '#1d1d1f'
+					DEFAULT: '#f8f9fa',
+					foreground: '#333333'
 				},
 				accent: {
-					DEFAULT: '#007AFF',
+					DEFAULT: '#60a5fa',
 					foreground: '#ffffff'
 				},
 				destructive: {
@@ -102,31 +102,13 @@ export default {
 					'50%': {
 						transform: 'translateY(-10px)'
 					}
-				},
-				'shimmer': {
-					'0%': {
-						transform: 'translateX(-100%)'
-					},
-					'100%': {
-						transform: 'translateX(100%)'
-					}
-				},
-				'breathe-accent': {
-					'0%, 100%': {
-						'box-shadow': '0 0 20px rgba(96, 165, 250, 0.3)'
-					},
-					'50%': {
-						'box-shadow': '0 0 40px rgba(96, 165, 250, 0.6)'
-					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'gradient-flow': 'gradient-flow 3s ease infinite',
-				'float': 'float 3s ease-in-out infinite',
-				'shimmer': 'shimmer 1.5s ease-in-out infinite',
-				'breathe-accent': 'breathe-accent 3s ease-in-out infinite'
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
