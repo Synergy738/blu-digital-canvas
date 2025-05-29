@@ -4,10 +4,10 @@ import { Briefcase, MapPin, Calendar } from 'lucide-react';
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 section-dark">
+    <section id="experience" className="py-20 experience-enhanced-bg">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-white mb-16">
-          Professional <span className="text-accent">Experience</span>
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">
+          <span className="text-gray-800">Professional</span> <span className="text-accent">Experience</span>
         </h2>
         
         <div className="max-w-4xl mx-auto">

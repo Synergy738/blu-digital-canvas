@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-20 text-center relative z-10">
         <div className="animate-float">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
-            Hi, I'm <span className="text-accent breathing-accent">Blũ</span>
+            Hi, I'm <span className="text-accent">Blũ</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             A curious and driven junior developer passionate about turning big ideas into accessible, user-friendly tech.
