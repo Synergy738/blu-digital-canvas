@@ -11,13 +11,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden hero-bg">
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-400/20 to-transparent animate-shimmer"></div>
-      </div>
-      
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white to-gray-200">
       <div className="container mx-auto px-6 py-20 text-center relative z-10">
-        <div className="animate-float">
+        <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
             Hi, I'm <span className="text-accent">Blũ</span>
           </h1>
