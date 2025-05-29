@@ -26,7 +26,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#000000',
+					DEFAULT: '#333333',
 					foreground: '#ffffff'
 				},
 				secondary: {
@@ -110,6 +110,14 @@ export default {
 					'100%': {
 						transform: 'translateX(100%)'
 					}
+				},
+				'breathe-accent': {
+					'0%, 100%': {
+						'box-shadow': '0 0 20px rgba(96, 165, 250, 0.3)'
+					},
+					'50%': {
+						'box-shadow': '0 0 40px rgba(96, 165, 250, 0.6)'
+					}
 				}
 			},
 			animation: {
@@ -117,7 +125,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'gradient-flow': 'gradient-flow 3s ease infinite',
 				'float': 'float 3s ease-in-out infinite',
-				'shimmer': 'shimmer 1.5s ease-in-out infinite'
+				'shimmer': 'shimmer 1.5s ease-in-out infinite',
+				'breathe-accent': 'breathe-accent 3s ease-in-out infinite'
 			}
 		}
 	},

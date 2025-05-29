@@ -97,21 +97,22 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-gray-50 to-gray-100 text-foreground;
+    @apply bg-gradient-to-br from-gray-100 to-gray-200 text-foreground;
   }
 }
 
 @layer components {
   .gradient-card {
-    background: linear-gradient(-45deg, #1a1a1a, #2a2a2a, #333333, #444444);
+    background: linear-gradient(-45deg, #f5f5f5, #e5e5e5, #d5d5d5, #c5c5c5);
     background-size: 400% 400%;
+    animation: gradient-flow 4s ease infinite;
   }
   
   .apple-card {
     position: relative;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(248, 248, 248, 0.8);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(200, 200, 200, 0.3);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
   }
@@ -123,7 +124,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(220, 220, 220, 0.4), transparent);
     transition: left 0.5s;
     pointer-events: none;
   }
@@ -133,9 +134,9 @@
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     box-shadow: 
-      0 25px 50px -12px rgba(0, 0, 0, 0.25),
-      0 0 0 1px rgba(255, 255, 255, 0.3),
-      0 0 40px rgba(96, 165, 250, 0.15);
+      0 25px 50px -12px rgba(0, 0, 0, 0.15),
+      0 0 0 1px rgba(200, 200, 200, 0.3),
+      0 0 40px rgba(96, 165, 250, 0.1);
   }
   
   .apple-card:hover::before {
@@ -144,8 +145,8 @@
   
   .skill-card {
     position: relative;
-    background: rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(245, 245, 245, 0.6);
+    border: 1px solid rgba(200, 200, 200, 0.2);
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     overflow: hidden;
   }
@@ -157,7 +158,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(220, 220, 220, 0.3), transparent);
     transition: left 0.5s;
     pointer-events: none;
   }
@@ -167,9 +168,9 @@
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(15px);
     box-shadow: 
-      0 20px 40px -10px rgba(0, 0, 0, 0.3),
-      0 0 0 1px rgba(0, 0, 0, 0.1),
-      0 0 30px rgba(0, 0, 0, 0.1);
+      0 20px 40px -10px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(200, 200, 200, 0.2),
+      0 0 30px rgba(96, 165, 250, 0.08);
   }
   
   .skill-card:hover::before {
@@ -177,24 +178,49 @@
   }
   
   .tech-logo {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
   }
   
   .apple-card:hover .tech-logo,
   .skill-card:hover .tech-logo {
     filter: grayscale(0%);
+    transform: scale(1.1);
   }
   
   .hero-bg {
-    background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #333333 50%, #4a4a4a 75%, #666666 100%);
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 25%, #d0d0d0 50%, #c0c0c0 75%, #b0b0b0 100%);
+    animation: gradient-flow 6s ease infinite;
   }
   
   .section-dark {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+    background: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 50%, #e8e8e8 100%);
+    animation: gradient-flow 8s ease infinite;
+  }
+  
+  .breathing-accent {
+    animation: breathe-accent 3s ease-in-out infinite;
+  }
+}
+
+@keyframes gradient-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes breathe-accent {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.6);
   }
 }
 
