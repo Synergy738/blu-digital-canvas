@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Calendar, ExternalLink, Filter } from 'lucide-react';
 
@@ -122,7 +121,7 @@ const Certifications = () => {
           </p>
         </div>
 
-        {/* Filter Buttons */}
+        {/* Filter Buttons with Dark Grey for Unselected */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           {institutions.map((institution) => (
             <button
@@ -131,7 +130,7 @@ const Certifications = () => {
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedFilter === institution
                   ? 'bg-accent text-primary'
-                  : 'bg-gray-700 text-secondary hover:bg-secondary'
+                  : 'bg-gray-900 text-secondary hover:bg-accent/20 hover:text-accent'
               }`}
             >
               {institution}

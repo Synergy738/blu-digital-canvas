@@ -33,10 +33,10 @@ const About = () => {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content - Image with Design */}
+          {/* Left Content - Image with Green Design */}
           <div className="relative">
-            <div className="w-full h-96 bg-gradient-to-br from-gray-700 to-secondary rounded-2xl flex items-center justify-center relative overflow-hidden border border-secondary">
-              {/* Background patterns */}
+            <div className="w-full h-96 bg-gray-900 rounded-2xl flex items-center justify-center relative overflow-hidden border border-accent/30">
+              {/* Background patterns with green */}
               <div className="absolute inset-0">
                 <div className="absolute top-10 left-10 w-20 h-20 border-2 border-accent/30 rounded-full"></div>
                 <div className="absolute bottom-10 right-10 w-16 h-16 bg-accent/20 rotate-45"></div>
@@ -45,18 +45,13 @@ const About = () => {
                 </div>
               </div>
               
-              {/* Profile Image */}
+              {/* Profile Image - Clean without text */}
               <div className="relative z-10 w-48 h-64 rounded-xl overflow-hidden border-2 border-accent/50">
                 <img 
                   src="/lovable-uploads/fada83be-694a-47a0-9125-2a1a9cab8a76.png" 
                   alt="Blũ Dennis"
                   className="w-full h-full object-cover grayscale"
                 />
-              </div>
-              
-              {/* Developer label */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-accent px-4 py-2 rounded-full">
-                <span className="text-primary font-semibold">Developer</span>
               </div>
             </div>
           </div>
@@ -80,10 +75,10 @@ const About = () => {
               Download CV
             </button>
 
-            {/* Skills Grid */}
+            {/* Skills Grid with Dark Background */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {skills.map((skill) => (
-                <div key={skill.name} className="bg-gray-700 p-4 rounded-lg border border-secondary hover:border-accent transition-all duration-300">
+                <div key={skill.name} className="bg-gray-900 p-4 rounded-lg border border-secondary hover:border-accent transition-all duration-300">
                   <div className="flex items-center gap-3 mb-2">
                     <img src={skill.logo} alt={skill.name} className="w-6 h-6 object-contain" />
                     <span className="text-light font-medium text-sm">{skill.name}</span>

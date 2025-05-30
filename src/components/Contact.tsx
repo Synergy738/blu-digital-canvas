@@ -84,7 +84,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
+                    className="bg-gray-900 border-secondary text-light placeholder-secondary focus:border-accent"
                     placeholder="Your name"
                   />
                 </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
+                    className="bg-gray-900 border-secondary text-light placeholder-secondary focus:border-accent"
                     placeholder="Your email"
                   />
                 </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
+                    className="bg-gray-900 border-secondary text-light placeholder-secondary focus:border-accent"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -122,7 +122,7 @@ const Contact = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-gray-700 border border-secondary text-light placeholder-secondary focus:border-accent rounded-md px-3 py-2"
+                    className="w-full bg-gray-900 border border-secondary text-light placeholder-secondary focus:border-accent rounded-md px-3 py-2"
                   >
                     <option value="">Select a service</option>
                     <option value="website">Website Development</option>
@@ -141,7 +141,7 @@ const Contact = () => {
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleChange}
-                  className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
+                  className="bg-gray-900 border-secondary text-light placeholder-secondary focus:border-accent"
                   placeholder="Project timeline"
                 />
               </div>
@@ -155,7 +155,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
+                  className="bg-gray-900 border-secondary text-light placeholder-secondary focus:border-accent"
                   placeholder="Tell me about your project..."
                 />
               </div>
