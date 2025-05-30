@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,15 +23,15 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 157, 100%, 45%; /* HSL of #00e58e */
-    --accent-foreground: 0 0% 100%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 157, 100%, 45%; /* Green border */
+    --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 157, 100%, 45%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
 
@@ -38,10 +39,10 @@
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 157, 100%, 45%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 157, 100%, 45%;
-    --sidebar-ring: 157, 100%, 45%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Custom colors */
     --accent-green: #00e58e;
@@ -70,29 +71,29 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 157, 100%, 45%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 157, 100%, 45%;
+    --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 157, 100%, 45%;
+    --ring: 212.7 26.8% 83.9%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 157, 100%, 45%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 157, 100%, 45%;
-    --sidebar-ring: 157, 100%, 45%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
 @layer base {
   * {
-    @apply border-[hsl(var(--border))];
+    @apply border-border;
   }
 
   body {
@@ -106,59 +107,59 @@
   .bg-gray-750 {
     background-color: #2a2a2a;
   }
-
+  
   .bg-gray-800 {
     background-color: #1f1f1f;
   }
-
+  
   .bg-gray-900 {
     background-color: var(--deep-dark);
   }
-
-  .text-accent-green {
+  
+  .text-accent {
     color: var(--accent-green);
   }
-
-  .bg-accent-green {
+  
+  .bg-accent {
     background-color: var(--accent-green);
   }
-
-  .border-accent-green {
+  
+  .border-accent {
     border-color: var(--accent-green);
   }
-
-  .hover\:bg-accent-green:hover {
+  
+  .hover\:bg-accent:hover {
     background-color: var(--accent-green);
   }
-
-  .hover\:text-accent-green:hover {
+  
+  .hover\:text-accent:hover {
     color: var(--accent-green);
   }
-
-  .hover\:border-accent-green:hover {
+  
+  .hover\:border-accent:hover {
     border-color: var(--accent-green);
   }
-
+  
   .bg-primary {
     background-color: var(--primary-dark);
   }
-
+  
   .bg-secondary {
     background-color: var(--secondary-gray);
   }
-
+  
   .text-primary {
     color: var(--primary-dark);
   }
-
+  
   .text-secondary {
     color: var(--secondary-gray);
   }
-
+  
   .text-light {
     color: var(--text-light);
   }
-
+  
   .border-secondary {
     border-color: var(--secondary-gray);
   }
