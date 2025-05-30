@@ -19,10 +19,10 @@ const Hero = () => {
       {/* Enhanced Background Design Elements with Green Color */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-accent-green/20 rotate-45 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent-green/30 rotate-12"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-accent/20 rotate-45 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 border border-accent/30 rotate-12"></div>
         <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-accent/10 rotate-45"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 border border-accent-green/20 rounded-full"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 border border-accent/20 rounded-full"></div>
         
         {/* Grid pattern with green */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,229,142,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,229,142,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
@@ -73,7 +73,7 @@ const Hero = () => {
               </button>
               <button 
                 onClick={handleDownloadCV}
-                className="border border-secondary hover:border-accent-green text-secondary hover:text-accent px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:bg-accent/10"
+                className="border border-secondary hover:border-accent text-secondary hover:text-accent px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:bg-accent/10"
               >
                 <Download size={18} />
                 Download CV
@@ -86,7 +86,7 @@ const Hero = () => {
             <div className="relative">
               {/* Enhanced decorative frame with green */}
               <div className="absolute -inset-4 bg-gradient-to-r from-accent/20 to-accent/20 rounded-2xl blur-xl"></div>
-              <div className="relative w-80 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-accent-green/30">
+              <div className="relative w-80 h-96 bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl overflow-hidden border border-accent/30">
                 <img 
                   src="/lovable-uploads/fada83be-694a-47a0-9125-2a1a9cab8a76.png" 
                   alt="Blũ Dennis"

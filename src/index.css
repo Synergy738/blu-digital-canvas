@@ -124,7 +124,7 @@
     background-color: var(--accent-green);
   }
   
-  .border-accent-green {
+  .border-accent {
     border-color: var(--accent-green);
   }
   
@@ -136,7 +136,7 @@
     color: var(--accent-green);
   }
   
-  .hover\:border-accent-green:hover {
+  .hover\:border-accent:hover {
     border-color: var(--accent-green);
   }
   
