@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import Logo from './Logo';
 
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
@@ -15,7 +16,7 @@ const Footer = () => {
     { label: 'Services', id: 'services' },
     { label: 'About me', id: 'about' },
     { label: 'Portfolio', id: 'certifications' },
-    { label: 'Contact me', id: 'contact' }
+    { label: 'Hire me', id: 'contact' }
   ];
 
   const socialLinks = [
@@ -37,12 +38,13 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 py-12">
+    <footer className="bg-gray-750 border-t border-gray-700 py-12">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-8">
           {/* Logo */}
-          <div className="text-2xl font-bold text-blue-400">
-            Blũ Dennis
+          <div className="flex items-center justify-center space-x-3">
+            <Logo />
+            <span className="text-2xl font-bold text-white">Blũ Dennis</span>
           </div>
 
           {/* Navigation */}
@@ -66,7 +68,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-500 transition-all duration-300"
+                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-500 transition-all duration-300"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -87,7 +89,7 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <div className="border-t border-gray-800 pt-8">
+          <div className="border-t border-gray-700 pt-8">
             <p className="text-gray-500 text-sm">
               Designed by @blũdennis UI/UX designer
             </p>

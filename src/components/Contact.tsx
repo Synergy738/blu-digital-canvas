@@ -30,29 +30,50 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`New Project Inquiry from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Service: ${formData.service}\n` +
+        `Timeline: ${formData.timeline}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      
+      const mailtoLink = `mailto:bludennis17@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Email client opened!",
+        description: "Your default email client should open with the message pre-filled.",
       });
+      
       setFormData({ name: '', email: '', phone: '', service: '', timeline: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was an issue opening your email client. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900">
+    <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Contact me</h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Hire Me</h2>
           <p className="text-gray-400">
             Cultivating Connections: Reach Out And Connect With Me
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-800 p-8 rounded-xl border border-gray-700">
+          <div className="bg-gray-750 p-8 rounded-xl border border-gray-600">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -148,11 +169,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                      Sending...
+                      Opening Email...
                     </>
                   ) : (
                     <>
-                      Send
+                      <Send size={16} className="mr-2" />
+                      Send Message
                     </>
                   )}
                 </Button>

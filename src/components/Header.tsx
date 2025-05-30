@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from './Logo';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,17 +28,17 @@ const Header = () => {
     { label: 'Services', id: 'services' },
     { label: 'About me', id: 'about' },
     { label: 'Portfolio', id: 'certifications' },
-    { label: 'Contact me', id: 'contact' }
   ];
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-900/95 backdrop-blur-sm' : 'bg-transparent'
+      isScrolled ? 'bg-gray-800/95 backdrop-blur-sm border-b border-gray-700' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="font-bold text-2xl text-blue-400">
-            Blũ Dennis
+          <div className="flex items-center space-x-3">
+            <Logo />
+            <span className="font-bold text-xl text-white">Blũ Dennis</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -71,7 +72,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-gray-800 rounded-lg">
+          <div className="md:hidden mt-4 py-4 bg-gray-700 rounded-lg">
             {navItems.map((item) => (
               <button
                 key={item.id}
