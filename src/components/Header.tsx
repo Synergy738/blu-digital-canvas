@@ -32,13 +32,12 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-gray-800/95 backdrop-blur-sm border-b border-gray-700' : 'bg-transparent'
+      isScrolled ? 'bg-primary/95 backdrop-blur-sm border-b border-secondary' : 'bg-transparent'
     }`}>
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center">
             <Logo />
-            <span className="font-bold text-xl text-white">Blũ Dennis</span>
           </div>
           
           {/* Desktop Navigation */}
@@ -47,7 +46,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`${index === 0 ? 'text-blue-400' : 'text-gray-300'} hover:text-blue-400 transition-colors duration-300 font-medium`}
+                className={`${index === 0 ? 'text-accent' : 'text-light'} hover:text-accent transition-colors duration-300 font-medium`}
               >
                 {item.label}
               </button>
@@ -56,14 +55,14 @@ const Header = () => {
 
           <button
             onClick={() => scrollToSection('contact')}
-            className="hidden md:block bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md transition-colors duration-300"
+            className="hidden md:block bg-accent hover:bg-accent/80 text-primary px-6 py-2 rounded-md transition-colors duration-300 font-medium"
           >
             Hire Me
           </button>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-light"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -72,19 +71,19 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-gray-700 rounded-lg">
+          <div className="md:hidden mt-4 py-4 bg-secondary rounded-lg">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-6 py-3 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                className="block w-full text-left px-6 py-3 text-light hover:text-accent transition-colors duration-300"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="w-full mt-4 mx-6 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-md transition-colors duration-300"
+              className="w-full mt-4 mx-6 bg-accent hover:bg-accent/80 text-primary px-6 py-2 rounded-md transition-colors duration-300"
             >
               Hire Me
             </button>
