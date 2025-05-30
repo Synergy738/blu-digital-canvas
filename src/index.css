@@ -49,6 +49,7 @@
     --primary-dark: #262626;
     --secondary-gray: #656565;
     --text-light: #e5e5e5;
+    --deep-dark: #1a1a1a;
   }
 
   .dark {
@@ -96,7 +97,7 @@
   }
 
   body {
-    background-color: var(--primary-dark);
+    background-color: var(--deep-dark);
     color: var(--text-light);
     font-family: 'Inter', sans-serif;
   }
@@ -104,7 +105,15 @@
 
 @layer utilities {
   .bg-gray-750 {
-    background-color: #3a3a3a;
+    background-color: #2a2a2a;
+  }
+  
+  .bg-gray-800 {
+    background-color: #1f1f1f;
+  }
+  
+  .bg-gray-900 {
+    background-color: var(--deep-dark);
   }
   
   .text-accent {
@@ -149,6 +158,10 @@
   
   .text-light {
     color: var(--text-light);
+  }
+  
+  .border-secondary {
+    border-color: var(--secondary-gray);
   }
 }
 

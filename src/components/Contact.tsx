@@ -66,30 +66,30 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Hire Me</h2>
-          <p className="text-gray-400">
+          <h2 className="text-4xl font-bold text-light mb-4">Hire Me</h2>
+          <p className="text-secondary">
             Cultivating Connections: Reach Out And Connect With Me
           </p>
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-750 p-8 rounded-xl border border-gray-600">
+          <div className="bg-gray-750 p-8 rounded-xl border border-secondary">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="name" className="text-gray-300 mb-2 block">Name</Label>
+                  <Label htmlFor="name" className="text-light mb-2 block">Name</Label>
                   <Input
                     id="name"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="email" className="text-gray-300 mb-2 block">Email</Label>
+                  <Label htmlFor="email" className="text-light mb-2 block">Email</Label>
                   <Input
                     id="email"
                     name="email"
@@ -97,7 +97,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
                     placeholder="Your email"
                   />
                 </div>
@@ -105,24 +105,24 @@ const Contact = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="phone" className="text-gray-300 mb-2 block">Phone Number</Label>
+                  <Label htmlFor="phone" className="text-light mb-2 block">Phone Number</Label>
                   <Input
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
                     placeholder="Your phone number"
                   />
                 </div>
                 <div>
-                  <Label htmlFor="service" className="text-gray-300 mb-2 block">Service Of Interest</Label>
+                  <Label htmlFor="service" className="text-light mb-2 block">Service Of Interest</Label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 rounded-md px-3 py-2"
+                    className="w-full bg-gray-700 border border-secondary text-light placeholder-secondary focus:border-accent rounded-md px-3 py-2"
                   >
                     <option value="">Select a service</option>
                     <option value="website">Website Development</option>
@@ -135,19 +135,19 @@ const Contact = () => {
               </div>
 
               <div>
-                <Label htmlFor="timeline" className="text-gray-300 mb-2 block">Timeline</Label>
+                <Label htmlFor="timeline" className="text-light mb-2 block">Timeline</Label>
                 <Input
                   id="timeline"
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleChange}
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                  className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
                   placeholder="Project timeline"
                 />
               </div>
               
               <div>
-                <Label htmlFor="message" className="text-gray-300 mb-2 block">Project Details...</Label>
+                <Label htmlFor="message" className="text-light mb-2 block">Project Details...</Label>
                 <Textarea
                   id="message"
                   name="message"
@@ -155,7 +155,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                  className="bg-gray-700 border-secondary text-light placeholder-secondary focus:border-accent"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -164,11 +164,11 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
+                  className="bg-accent hover:bg-accent/80 text-primary px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                      <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary mr-2"></div>
                       Opening Email...
                     </>
                   ) : (

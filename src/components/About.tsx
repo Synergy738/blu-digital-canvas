@@ -26,8 +26,8 @@ const About = () => {
     <section id="about" className="py-20 bg-gray-750">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
-          <p className="text-gray-400">
+          <h2 className="text-4xl font-bold text-light mb-4">About Me</h2>
+          <p className="text-secondary">
             Frontend/Backend Development & Cybersecurity Specialist
           </p>
         </div>
@@ -35,18 +35,18 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content - Image with Design */}
           <div className="relative">
-            <div className="w-full h-96 bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl flex items-center justify-center relative overflow-hidden border border-gray-600">
+            <div className="w-full h-96 bg-gradient-to-br from-gray-700 to-secondary rounded-2xl flex items-center justify-center relative overflow-hidden border border-secondary">
               {/* Background patterns */}
               <div className="absolute inset-0">
-                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-blue-400/30 rounded-full"></div>
-                <div className="absolute bottom-10 right-10 w-16 h-16 bg-blue-500/20 rotate-45"></div>
+                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-accent/30 rounded-full"></div>
+                <div className="absolute bottom-10 right-10 w-16 h-16 bg-accent/20 rotate-45"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-32 h-32 border-4 border-blue-400/40 rounded-2xl rotate-12"></div>
+                  <div className="w-32 h-32 border-4 border-accent/40 rounded-2xl rotate-12"></div>
                 </div>
               </div>
               
               {/* Profile Image */}
-              <div className="relative z-10 w-48 h-64 rounded-xl overflow-hidden border-2 border-blue-400/50">
+              <div className="relative z-10 w-48 h-64 rounded-xl overflow-hidden border-2 border-accent/50">
                 <img 
                   src="/lovable-uploads/fada83be-694a-47a0-9125-2a1a9cab8a76.png" 
                   alt="Blũ Dennis"
@@ -55,8 +55,8 @@ const About = () => {
               </div>
               
               {/* Developer label */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-blue-500 px-4 py-2 rounded-full">
-                <span className="text-white font-semibold">Developer</span>
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-accent px-4 py-2 rounded-full">
+                <span className="text-primary font-semibold">Developer</span>
               </div>
             </div>
           </div>
@@ -64,17 +64,17 @@ const About = () => {
           {/* Right Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-light leading-relaxed">
                 A software engineer and the modern-day architect of digital realms, I navigate the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, I compose symphonies of logic, my mind a labyrinth of algorithms and solutions.
               </p>
-              <p className="text-gray-300 leading-relaxed">
+              <p className="text-light leading-relaxed">
                 My canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs.
               </p>
             </div>
 
             <button 
               onClick={handleDownloadCV}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105"
+              className="bg-accent hover:bg-accent/80 text-primary px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105"
             >
               <Download size={18} />
               Download CV
@@ -83,18 +83,18 @@ const About = () => {
             {/* Skills Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
               {skills.map((skill) => (
-                <div key={skill.name} className="bg-gray-700 p-4 rounded-lg border border-gray-600 hover:border-blue-500 transition-all duration-300">
+                <div key={skill.name} className="bg-gray-700 p-4 rounded-lg border border-secondary hover:border-accent transition-all duration-300">
                   <div className="flex items-center gap-3 mb-2">
                     <img src={skill.logo} alt={skill.name} className="w-6 h-6 object-contain" />
-                    <span className="text-white font-medium text-sm">{skill.name}</span>
+                    <span className="text-light font-medium text-sm">{skill.name}</span>
                   </div>
-                  <div className="w-full bg-gray-600 rounded-full h-2">
+                  <div className="w-full bg-secondary rounded-full h-2">
                     <div 
-                      className="bg-blue-500 h-2 rounded-full transition-all duration-1000" 
+                      className="bg-accent h-2 rounded-full transition-all duration-1000" 
                       style={{ width: `${skill.level}%` }}
                     ></div>
                   </div>
-                  <span className="text-blue-400 font-semibold text-xs">{skill.level}%</span>
+                  <span className="text-accent font-semibold text-xs">{skill.level}%</span>
                 </div>
               ))}
             </div>
