@@ -38,32 +38,27 @@ const About = () => {
             <div className="w-full h-96 bg-[#1a1a1a] rounded-2xl flex items-center justify-center relative overflow-hidden">
               {/* Background patterns */}
               <div className="absolute inset-0">
-                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-[#00e58e]/30 rounded-full"></div>
-                <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#00e58e]/20 rotate-45"></div>
+                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-[#0055ff]/30 rounded-full"></div>
+                <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#0055ff]/20 rotate-45"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-32 h-32 border-4 border-[#00e58e]/40 rounded-2xl rotate-12"></div>
+                  <div className="w-32 h-32 border-4 border-[#0055ff]/40 rounded-2xl rotate-12"></div>
                 </div>
               </div>
               
               {/* Tech Icons */}
               <div className="relative z-10 grid grid-cols-2 gap-8">
-                <div className="w-24 h-24 bg-[#00e58e]/20 rounded-xl flex items-center justify-center">
-                  <Code2 className="text-[#00e58e]" size={40} />
+                <div className="w-24 h-24 bg-[#0055ff]/20 rounded-xl flex items-center justify-center">
+                  <Code2 className="text-[#0055ff]" size={40} />
                 </div>
-                <div className="w-24 h-24 bg-[#00e58e]/20 rounded-xl flex items-center justify-center">
-                  <Database className="text-[#00e58e]" size={40} />
+                <div className="w-24 h-24 bg-[#0055ff]/20 rounded-xl flex items-center justify-center">
+                  <Database className="text-[#0055ff]" size={40} />
                 </div>
-                <div className="w-24 h-24 bg-[#00e58e]/20 rounded-xl flex items-center justify-center">
-                  <Shield className="text-[#00e58e]" size={40} />
+                <div className="w-24 h-24 bg-[#0055ff]/20 rounded-xl flex items-center justify-center">
+                  <Shield className="text-[#0055ff]" size={40} />
                 </div>
-                <div className="w-24 h-24 bg-[#00e58e]/20 rounded-xl flex items-center justify-center">
-                  <div className="text-[#00e58e] font-bold text-2xl">AI</div>
+                <div className="w-24 h-24 bg-[#0055ff]/20 rounded-xl flex items-center justify-center">
+                  <div className="text-[#0055ff] font-bold text-2xl">AI</div>
                 </div>
-              </div>
-              
-              {/* Developer label */}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-[#00e58e] px-4 py-2 rounded-full">
-                <span className="text-white font-semibold">Developer</span>
               </div>
             </div>
           </div>
@@ -81,7 +76,7 @@ const About = () => {
 
             <button 
               onClick={handleDownloadCV}
-              className="bg-[#00e58e] hover:bg-[#00d17a] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105"
+              className="bg-[#0055ff] hover:bg-[#0044cc] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105"
             >
               <Download size={18} />
               Download CV

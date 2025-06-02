@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, Linkedin, Github } from 'lucide-react';
+import { Phone, Linkedin, Github } from 'lucide-react';
 import Logo from './Logo';
 
 const Footer = () => {
@@ -29,11 +29,6 @@ const Footer = () => {
       icon: <Github size={20} />,
       href: "https://github.com/Synergy738",
       label: "GitHub"
-    },
-    {
-      icon: <Mail size={20} />,
-      href: "mailto:bludennis17@gmail.com",
-      label: "Email"
     }
   ];
 
@@ -52,7 +47,7 @@ const Footer = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-400 hover:text-[#00e58e] transition-colors duration-300"
+                className="text-gray-400 hover:text-[#0055ff] transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -67,7 +62,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#00e58e] transition-all duration-300"
+                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0055ff] transition-all duration-300"
                 aria-label={social.label}
               >
                 {social.icon}
@@ -76,11 +71,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 text-gray-400">
-            <div className="flex items-center gap-2">
-              <Mail size={16} />
-              <span>bludennis17@gmail.com</span>
-            </div>
+          <div className="flex justify-center items-center text-gray-400">
             <div className="flex items-center gap-2">
               <Phone size={16} />
               <span>+27 64 766 9310</span>
