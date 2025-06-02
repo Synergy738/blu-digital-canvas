@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Phone, Linkedin, Github, Send } from 'lucide-react';
+import { Phone, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -62,34 +62,21 @@ const Contact = () => {
     }
   };
 
-  const socialLinks = [
-    {
-      icon: <Linkedin size={20} />,
-      href: "https://www.linkedin.com/in/blu-dennis-b40136278",
-      label: "LinkedIn"
-    },
-    {
-      icon: <Github size={20} />,
-      href: "https://github.com/Synergy738",
-      label: "GitHub"
-    }
-  ];
-
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl font-bold text-white mb-4">Hire Me</h2>
           <p className="text-gray-400">
             Cultivating Connections: Reach Out And Connect With Me
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
           <div className="bg-[#262626] p-8 rounded-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
+                <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
                   <Label htmlFor="name" className="text-gray-300 mb-2 block">Name</Label>
                   <Input
                     id="name"
@@ -101,7 +88,7 @@ const Contact = () => {
                     placeholder="Your name"
                   />
                 </div>
-                <div>
+                <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
                   <Label htmlFor="email" className="text-gray-300 mb-2 block">Email</Label>
                   <Input
                     id="email"
@@ -117,7 +104,7 @@ const Contact = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
+                <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
                   <Label htmlFor="phone" className="text-gray-300 mb-2 block">Phone Number</Label>
                   <Input
                     id="phone"
@@ -128,7 +115,7 @@ const Contact = () => {
                     placeholder="Your phone number"
                   />
                 </div>
-                <div>
+                <div className="animate-fade-in" style={{ animationDelay: '0.7s' }}>
                   <Label htmlFor="service" className="text-gray-300 mb-2 block">Service Of Interest</Label>
                   <select
                     id="service"
@@ -147,7 +134,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 <Label htmlFor="timeline" className="text-gray-300 mb-2 block">Timeline</Label>
                 <Input
                   id="timeline"
@@ -159,7 +146,7 @@ const Contact = () => {
                 />
               </div>
               
-              <div>
+              <div className="animate-fade-in" style={{ animationDelay: '0.9s' }}>
                 <Label htmlFor="message" className="text-gray-300 mb-2 block">Project Details...</Label>
                 <Textarea
                   id="message"
@@ -173,7 +160,7 @@ const Contact = () => {
                 />
               </div>
               
-              <div className="text-center">
+              <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -194,29 +181,12 @@ const Contact = () => {
               </div>
             </form>
 
-            {/* Contact Info and Social Links */}
-            <div className="mt-12 pt-8 border-t border-gray-700">
-              <div className="flex flex-col items-center gap-6">
-                {/* Phone Number - Centered */}
+            {/* Contact Info - Only Phone Number */}
+            <div className="mt-12 pt-8 border-t border-gray-700 animate-fade-in" style={{ animationDelay: '1.1s' }}>
+              <div className="flex justify-center">
                 <div className="flex items-center gap-2 text-gray-400">
                   <Phone size={16} />
                   <span>+27 64 766 9310</span>
-                </div>
-
-                {/* Social Links */}
-                <div className="flex justify-center gap-6">
-                  {socialLinks.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#588aef] transition-all duration-300"
-                      aria-label={social.label}
-                    >
-                      {social.icon}
-                    </a>
-                  ))}
                 </div>
               </div>
             </div>
