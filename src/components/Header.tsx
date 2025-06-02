@@ -47,7 +47,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`${index === 0 ? 'text-[#0055ff]' : 'text-gray-300'} hover:text-[#0055ff] transition-colors duration-300 font-medium`}
+                className={`${index === 0 ? 'text-[#497adb]' : 'text-gray-300'} hover:text-[#497adb] transition-colors duration-300 font-medium`}
               >
                 {item.label}
               </button>
@@ -56,7 +56,7 @@ const Header = () => {
 
           <button
             onClick={() => scrollToSection('contact')}
-            className="hidden md:block bg-[#0055ff] hover:bg-[#0044cc] text-white px-6 py-2 rounded-md transition-colors duration-300"
+            className="hidden md:block bg-[#497adb] hover:bg-[#3a68c7] text-white px-6 py-2 rounded-md transition-colors duration-300"
           >
             Hire Me
           </button>
@@ -77,14 +77,14 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-6 py-3 text-gray-300 hover:text-[#0055ff] transition-colors duration-300"
+                className="block w-full text-left px-6 py-3 text-gray-300 hover:text-[#497adb] transition-colors duration-300"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="w-full mt-4 mx-6 bg-[#0055ff] hover:bg-[#0044cc] text-white px-6 py-2 rounded-md transition-colors duration-300"
+              className="w-full mt-4 mx-6 bg-[#497adb] hover:bg-[#3a68c7] text-white px-6 py-2 rounded-md transition-colors duration-300"
             >
               Hire Me
             </button>

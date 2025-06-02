@@ -127,7 +127,7 @@ const Certifications = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            <span className="text-[#00e58e]">Certifications</span>
+            <span className="text-[#497adb]">Certifications</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             My professional certifications and achievements from globally recognized institutions
@@ -142,7 +142,7 @@ const Certifications = () => {
               onClick={() => setSelectedFilter(institution)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedFilter === institution
-                  ? 'bg-[#00e58e] text-white'
+                  ? 'bg-[#497adb] text-white'
                   : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-700'
               }`}
             >
@@ -185,32 +185,32 @@ const Certifications = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-white mb-2 leading-tight group-hover:text-[#00e58e] transition-colors text-sm">
+                  <h3 className="font-semibold text-white mb-2 leading-tight group-hover:text-[#497adb] transition-colors text-sm">
                     {cert.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-2">{cert.institution}</p>
-                  <div className="flex items-center text-[#00e58e] text-sm mb-2">
+                  <div className="flex items-center text-[#497adb] text-sm mb-2">
                     <Calendar size={14} className="mr-1" />
                     {cert.date}
                   </div>
                   {/* Percentage with animation */}
                   <div className="mb-2">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-[#00e58e] text-sm font-medium">Score</span>
-                      <span className="text-[#00e58e] font-bold">{cert.percentage}%</span>
+                      <span className="text-[#497adb] text-sm font-medium">Score</span>
+                      <span className="text-[#497adb] font-bold">{cert.percentage}%</span>
                     </div>
                     <div className="w-full bg-gray-600 rounded-full h-2">
                       <div 
-                        className="bg-[#00e58e] h-2 rounded-full transition-all duration-1000 ease-out" 
+                        className="bg-[#497adb] h-2 rounded-full transition-all duration-1000 ease-out" 
                         style={{ width: `${cert.percentage}%` }}
                       ></div>
                     </div>
                   </div>
                 </div>
-                <ExternalLink size={16} className="text-gray-500 group-hover:text-[#00e58e] transition-colors" />
+                <ExternalLink size={16} className="text-gray-500 group-hover:text-[#497adb] transition-colors" />
               </div>
               <div className="border-t border-gray-700 pt-4">
-                <span className="text-[#00e58e] text-sm font-medium">Certified</span>
+                <span className="text-[#497adb] text-sm font-medium">Certified</span>
               </div>
             </a>
           ))}

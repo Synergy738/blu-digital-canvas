@@ -9,7 +9,7 @@ const Logo = ({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) => {
   };
 
   return (
-    <div className={`${sizeClasses[size]} bg-[#0055ff] rounded-lg flex items-center justify-center font-bold text-white logo-pulse`}>
+    <div className={`${sizeClasses[size]} bg-[#497adb] rounded-lg flex items-center justify-center font-bold text-white logo-pulse`}>
       B
     </div>
   );

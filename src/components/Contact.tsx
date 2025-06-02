@@ -97,7 +97,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#497adb]"
                     placeholder="Your name"
                   />
                 </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#497adb]"
                     placeholder="Your email"
                   />
                 </div>
@@ -124,7 +124,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#497adb]"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -135,7 +135,7 @@ const Contact = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-[#1a1a1a] border border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e] rounded-md px-3 py-2"
+                    className="w-full bg-[#1a1a1a] border border-gray-600 text-white placeholder-gray-400 focus:border-[#497adb] rounded-md px-3 py-2"
                   >
                     <option value="">Select a service</option>
                     <option value="website">Website Development</option>
@@ -154,7 +154,7 @@ const Contact = () => {
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleChange}
-                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
+                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#497adb]"
                   placeholder="Project timeline"
                 />
               </div>
@@ -168,7 +168,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
+                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#497adb]"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -177,7 +177,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-[#00e58e] hover:bg-[#00d17a] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
+                  className="bg-[#497adb] hover:bg-[#3a68c7] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
                 >
                   {isSubmitting ? (
                     <>
@@ -211,7 +211,7 @@ const Contact = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#00e58e] transition-all duration-300"
+                      className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#497adb] transition-all duration-300"
                       aria-label={social.label}
                     >
                       {social.icon}

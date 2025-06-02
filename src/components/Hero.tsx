@@ -19,30 +19,30 @@ const Hero = () => {
       {/* Enhanced Background Design Elements */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-[#0055ff]/20 rotate-45 animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 border border-[#0055ff]/30 rotate-12"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-[#0055ff]/10 rotate-45"></div>
-        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 border border-[#0055ff]/20 rounded-full"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 border-2 border-[#497adb]/20 rotate-45 animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 border border-[#497adb]/30 rotate-12"></div>
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-[#497adb]/10 rotate-45"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-20 h-20 border border-[#497adb]/20 rounded-full"></div>
         
         {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,85,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,85,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(73,122,219,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(73,122,219,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         {/* Gradient orbs */}
-        <div className="absolute top-1/4 left-1/3 w-40 h-40 bg-[#0055ff]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-60 h-60 bg-[#0055ff]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/3 w-40 h-40 bg-[#497adb]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-60 h-60 bg-[#497adb]/5 rounded-full blur-3xl"></div>
         
         {/* Code symbols floating */}
-        <div className="absolute top-1/4 right-20 text-[#0055ff]/20 text-6xl font-mono">{"{ }"}</div>
-        <div className="absolute bottom-1/4 left-20 text-[#0055ff]/20 text-4xl font-mono">{"< />"}</div>
+        <div className="absolute top-1/4 right-20 text-[#497adb]/20 text-6xl font-mono">{"{ }"}</div>
+        <div className="absolute bottom-1/4 left-20 text-[#497adb]/20 text-4xl font-mono">{"< />"}</div>
         
         {/* Tech icons */}
-        <div className="absolute top-1/2 left-10 text-[#0055ff]/15">
+        <div className="absolute top-1/2 left-10 text-[#497adb]/15">
           <Code size={32} />
         </div>
-        <div className="absolute top-1/3 right-16 text-[#0055ff]/15">
+        <div className="absolute top-1/3 right-16 text-[#497adb]/15">
           <Zap size={28} />
         </div>
-        <div className="absolute bottom-1/2 right-1/4 text-[#0055ff]/15">
+        <div className="absolute bottom-1/2 right-1/4 text-[#497adb]/15">
           <Globe size={24} />
         </div>
       </div>
@@ -52,11 +52,11 @@ const Hero = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <p className="text-[#0055ff] text-lg font-medium">Hello, I'm</p>
+              <p className="text-[#497adb] text-lg font-medium">Hello, I'm</p>
               <h1 className="text-2xl lg:text-3xl font-bold text-white">
                 Blũ Dennis
               </h1>
-              <h2 className="text-5xl lg:text-7xl font-bold text-[#0055ff] animate-pulse">
+              <h2 className="text-5xl lg:text-7xl font-bold text-[#497adb] animate-pulse">
                 Frontend/Backend Developer
               </h2>
               <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
@@ -67,13 +67,13 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 onClick={scrollToServices}
-                className="bg-[#0055ff] hover:bg-[#0044cc] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105 shadow-lg"
+                className="bg-[#497adb] hover:bg-[#3a68c7] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105 shadow-lg"
               >
                 Discover My Journey
               </button>
               <button 
                 onClick={handleDownloadCV}
-                className="border border-gray-600 hover:border-[#0055ff] text-gray-300 hover:text-[#0055ff] px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:bg-[#0055ff]/10"
+                className="border border-gray-600 hover:border-[#497adb] text-gray-300 hover:text-[#497adb] px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center justify-center gap-2 hover:bg-[#497adb]/10"
               >
                 <Download size={18} />
                 Download CV
@@ -85,7 +85,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               {/* Enhanced decorative frame */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#0055ff]/20 to-[#0055ff]/20 rounded-2xl blur-xl"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#497adb]/20 to-[#497adb]/20 rounded-2xl blur-xl"></div>
               <div className="relative w-80 h-96 bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl overflow-hidden">
                 <img 
                   src="/lovable-uploads/fada83be-694a-47a0-9125-2a1a9cab8a76.png" 
@@ -94,15 +94,15 @@ const Hero = () => {
                 />
                 
                 {/* Enhanced decorative elements */}
-                <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#0055ff] rounded-full shadow-lg shadow-[#0055ff]/30"></div>
-                <div className="absolute -bottom-6 -left-6 w-8 h-8 border-2 border-[#0055ff] rounded-full shadow-lg shadow-[#0055ff]/30"></div>
-                <div className="absolute top-4 -left-4 w-6 h-6 bg-[#0055ff] rounded-full opacity-60"></div>
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#497adb] rounded-full shadow-lg shadow-[#497adb]/30"></div>
+                <div className="absolute -bottom-6 -left-6 w-8 h-8 border-2 border-[#497adb] rounded-full shadow-lg shadow-[#497adb]/30"></div>
+                <div className="absolute top-4 -left-4 w-6 h-6 bg-[#497adb] rounded-full opacity-60"></div>
                 
                 {/* Tech stack indicators */}
                 <div className="absolute top-4 right-4 flex flex-col gap-2">
-                  <div className="w-3 h-3 bg-[#0055ff] rounded-full animate-pulse"></div>
-                  <div className="w-3 h-3 bg-[#0055ff] rounded-full animate-pulse delay-75"></div>
-                  <div className="w-3 h-3 bg-[#0055ff] rounded-full animate-pulse delay-150"></div>
+                  <div className="w-3 h-3 bg-[#497adb] rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-[#497adb] rounded-full animate-pulse delay-75"></div>
+                  <div className="w-3 h-3 bg-[#497adb] rounded-full animate-pulse delay-150"></div>
                 </div>
               </div>
             </div>

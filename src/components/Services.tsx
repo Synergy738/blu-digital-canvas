@@ -5,32 +5,32 @@ import { Code, Globe, Shield, Brain, Server, Smartphone } from 'lucide-react';
 const Services = () => {
   const services = [
     {
-      icon: <Globe className="text-[#00e58e]" size={40} />,
+      icon: <Globe className="text-[#497adb]" size={40} />,
       title: "Website Development",
       description: "Creating responsive, modern websites using cutting-edge technologies like React, HTML5, CSS3, and JavaScript to deliver exceptional user experiences."
     },
     {
-      icon: <Smartphone className="text-[#00e58e]" size={40} />,
+      icon: <Smartphone className="text-[#497adb]" size={40} />,
       title: "App Development", 
       description: "Building cross-platform mobile and desktop applications with intuitive interfaces and robust functionality using modern frameworks and best practices."
     },
     {
-      icon: <Shield className="text-[#00e58e]" size={40} />,
+      icon: <Shield className="text-[#497adb]" size={40} />,
       title: "Cybersecurity",
       description: "Implementing comprehensive security solutions, conducting vulnerability assessments, and ensuring data protection with industry-standard security protocols."
     },
     {
-      icon: <Brain className="text-[#00e58e]" size={40} />,
+      icon: <Brain className="text-[#497adb]" size={40} />,
       title: "Machine Learning",
       description: "Developing intelligent systems and AI solutions using Python, data analysis, and machine learning algorithms to solve complex business problems."
     },
     {
-      icon: <Server className="text-[#00e58e]" size={40} />,
+      icon: <Server className="text-[#497adb]" size={40} />,
       title: "Backend Development",
       description: "Creating robust server-side applications and APIs using technologies like PHP, MySQL, and modern backend frameworks for scalable solutions."
     },
     {
-      icon: <Code className="text-[#00e58e]" size={40} />,
+      icon: <Code className="text-[#497adb]" size={40} />,
       title: "Full-Stack Solutions",
       description: "End-to-end development services combining frontend and backend expertise to deliver complete, production-ready applications."
     }
