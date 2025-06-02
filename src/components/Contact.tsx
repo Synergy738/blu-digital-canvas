@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, Github, Send, CheckCircle } from 'lucide-react';
+import { Phone, Linkedin, Github, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -62,6 +62,19 @@ const Contact = () => {
     }
   };
 
+  const socialLinks = [
+    {
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/in/blu-dennis-b40136278",
+      label: "LinkedIn"
+    },
+    {
+      icon: <Github size={20} />,
+      href: "https://github.com/Synergy738",
+      label: "GitHub"
+    }
+  ];
+
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
@@ -73,7 +86,7 @@ const Contact = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-750 p-8 rounded-xl border border-gray-600">
+          <div className="bg-[#262626] p-8 rounded-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -84,7 +97,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                     placeholder="Your name"
                   />
                 </div>
@@ -97,7 +110,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                     placeholder="Your email"
                   />
                 </div>
@@ -111,7 +124,7 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                     placeholder="Your phone number"
                   />
                 </div>
@@ -122,7 +135,7 @@ const Contact = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 rounded-md px-3 py-2"
+                    className="w-full bg-[#1a1a1a] border border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e] rounded-md px-3 py-2"
                   >
                     <option value="">Select a service</option>
                     <option value="website">Website Development</option>
@@ -141,7 +154,7 @@ const Contact = () => {
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleChange}
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                   placeholder="Project timeline"
                 />
               </div>
@@ -155,7 +168,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500"
+                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -164,7 +177,7 @@ const Contact = () => {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
+                  className="bg-[#00e58e] hover:bg-[#00d17a] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
                 >
                   {isSubmitting ? (
                     <>
@@ -180,6 +193,33 @@ const Contact = () => {
                 </Button>
               </div>
             </form>
+
+            {/* Contact Info and Social Links */}
+            <div className="mt-12 pt-8 border-t border-gray-700">
+              <div className="flex flex-col items-center gap-6">
+                {/* Phone Number - Centered */}
+                <div className="flex items-center gap-2 text-gray-400">
+                  <Phone size={16} />
+                  <span>+27 64 766 9310</span>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-6">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#00e58e] transition-all duration-300"
+                      aria-label={social.label}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

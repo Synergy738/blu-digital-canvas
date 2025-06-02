@@ -8,7 +8,7 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Professional <span className="text-blue-400">Experience</span>
+            Professional <span className="text-[#00e58e]">Experience</span>
           </h2>
           <p className="text-gray-400">
             My professional journey and work experience
@@ -16,10 +16,10 @@ const Experience = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gray-800 p-8 rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300">
+          <div className="bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-300">
             <div className="flex items-start space-x-6 mb-6">
-              <div className="w-16 h-16 bg-gray-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                <Briefcase className="text-blue-400" size={24} />
+              <div className="w-16 h-16 bg-[#262626] rounded-xl flex items-center justify-center flex-shrink-0">
+                <Briefcase className="text-[#00e58e]" size={24} />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">
@@ -29,14 +29,14 @@ const Experience = () => {
                   <MapPin size={16} className="mr-2" />
                   <span className="font-medium">Superb Digital</span>
                 </div>
-                <div className="flex items-center text-blue-400 mb-4">
+                <div className="flex items-center text-[#00e58e] mb-4">
                   <Calendar size={16} className="mr-2" />
                   <span>April 2025 - Present</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gray-900 p-6 rounded-xl border border-gray-700">
+            <div className="bg-[#262626] p-6 rounded-xl">
               <p className="text-gray-300 leading-relaxed mb-6">
                 I am currently employed at Superb Digital as a Web Design and Developer Intern, in which I am working alongside my colleagues to create WordPress websites according to the clients' needs. In addition to WordPress, I use a combination of various programming languages (PHP, CSS, HTML and TypeScript) to generate certain elements and provide functionality to web pages, along with plugins such as Elementor for the overall theme of the website and Solid Security to prevent unauthorized users from accessing and tampering with the clients' website.
               </p>
@@ -45,7 +45,7 @@ const Experience = () => {
                 {['WordPress', 'PHP', 'CSS', 'HTML', 'TypeScript', 'Elementor', 'Solid Security'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-gray-800 text-blue-400 text-sm rounded-full border border-gray-600 hover:border-blue-500 transition-colors"
+                    className="px-4 py-2 bg-[#1a1a1a] text-[#00e58e] text-sm rounded-full hover:bg-gray-700 transition-colors"
                   >
                     {tech}
                   </span>

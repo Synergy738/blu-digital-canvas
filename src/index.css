@@ -126,13 +126,23 @@ html {
 /* Logo animation */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 20px rgba(0, 229, 142, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 30px rgba(0, 229, 142, 0.5);
   }
 }
 
 .logo-pulse {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(45deg); }
+  50% { transform: translateY(-10px) rotate(45deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }

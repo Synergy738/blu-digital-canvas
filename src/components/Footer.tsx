@@ -15,8 +15,8 @@ const Footer = () => {
     { label: 'Home', id: 'hero' },
     { label: 'Services', id: 'services' },
     { label: 'About me', id: 'about' },
-    { label: 'Portfolio', id: 'certifications' },
-    { label: 'Hire me', id: 'contact' }
+    { label: 'Certifications', id: 'certifications' },
+    { label: 'Experience', id: 'experience' }
   ];
 
   const socialLinks = [
@@ -38,13 +38,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-750 border-t border-gray-700 py-12">
+    <footer className="bg-[#262626] border-t border-gray-700 py-12">
       <div className="container mx-auto px-6">
         <div className="text-center space-y-8">
           {/* Logo */}
-          <div className="flex items-center justify-center space-x-3">
+          <div className="flex items-center justify-center">
             <Logo />
-            <span className="text-2xl font-bold text-white">Blũ Dennis</span>
           </div>
 
           {/* Navigation */}
@@ -53,7 +52,7 @@ const Footer = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                className="text-gray-400 hover:text-[#00e58e] transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -68,7 +67,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-500 transition-all duration-300"
+                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#00e58e] transition-all duration-300"
                 aria-label={social.label}
               >
                 {social.icon}
