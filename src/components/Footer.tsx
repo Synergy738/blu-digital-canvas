@@ -47,7 +47,7 @@ const Footer = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-400 hover:text-[#497adb] transition-colors duration-300"
+                className="text-gray-400 hover:text-[#588aef] transition-colors duration-300"
               >
                 {item.label}
               </button>
@@ -62,7 +62,7 @@ const Footer = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#497adb] transition-all duration-300"
+                className="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#588aef] transition-all duration-300"
                 aria-label={social.label}
               >
                 {social.icon}

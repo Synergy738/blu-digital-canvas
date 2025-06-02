@@ -126,10 +126,10 @@ html {
 /* Logo animation */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(73, 122, 219, 0.3);
+    box-shadow: 0 0 20px rgba(88, 138, 239, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(73, 122, 219, 0.5);
+    box-shadow: 0 0 30px rgba(88, 138, 239, 0.5);
   }
 }
 

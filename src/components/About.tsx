@@ -15,7 +15,7 @@ const About = () => {
     { name: 'GitHub', logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' },
     { name: 'VS Code', logo: 'https://code.visualstudio.com/assets/images/code-stable.png' },
     { name: 'PHP', logo: 'https://www.php.net/images/logos/new-php-logo.svg' },
-    { name: 'Delphi', logo: 'https://www.logotypes101.com/logos/478/9EF9AF05F38F87E0F13C18CE65CE4C12/delphi.png' }
+    { name: 'Delphi', logo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.logotypes101.com%2Flogo%2Fdelphi-1&psig=AOvVaw1GfFhuDTCcmyhaHA-0akIz&ust=1748930798975000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCB4Y2J0o0DFQAAAAAdAAAAABAE' }
   ];
 
   const handleDownloadCV = () => {
@@ -38,26 +38,26 @@ const About = () => {
             <div className="w-full h-96 bg-[#1a1a1a] rounded-2xl flex items-center justify-center relative overflow-hidden">
               {/* Background patterns */}
               <div className="absolute inset-0">
-                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-[#497adb]/30 rounded-full"></div>
-                <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#497adb]/20 rotate-45"></div>
+                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-[#588aef]/30 rounded-full"></div>
+                <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#588aef]/20 rotate-45"></div>
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-32 h-32 border-4 border-[#497adb]/40 rounded-2xl rotate-12"></div>
+                  <div className="w-32 h-32 border-4 border-[#588aef]/40 rounded-2xl rotate-12"></div>
                 </div>
               </div>
               
               {/* Tech Icons */}
               <div className="relative z-10 grid grid-cols-2 gap-8">
-                <div className="w-24 h-24 bg-[#497adb]/20 rounded-xl flex items-center justify-center">
-                  <Code2 className="text-[#497adb]" size={40} />
+                <div className="w-24 h-24 bg-[#588aef]/20 rounded-xl flex items-center justify-center">
+                  <Code2 className="text-[#588aef]" size={40} />
                 </div>
-                <div className="w-24 h-24 bg-[#497adb]/20 rounded-xl flex items-center justify-center">
-                  <Database className="text-[#497adb]" size={40} />
+                <div className="w-24 h-24 bg-[#588aef]/20 rounded-xl flex items-center justify-center">
+                  <Database className="text-[#588aef]" size={40} />
                 </div>
-                <div className="w-24 h-24 bg-[#497adb]/20 rounded-xl flex items-center justify-center">
-                  <Shield className="text-[#497adb]" size={40} />
+                <div className="w-24 h-24 bg-[#588aef]/20 rounded-xl flex items-center justify-center">
+                  <Shield className="text-[#588aef]" size={40} />
                 </div>
-                <div className="w-24 h-24 bg-[#497adb]/20 rounded-xl flex items-center justify-center">
-                  <div className="text-[#497adb] font-bold text-2xl">AI</div>
+                <div className="w-24 h-24 bg-[#588aef]/20 rounded-xl flex items-center justify-center">
+                  <div className="text-[#588aef] font-bold text-2xl">AI</div>
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@ const About = () => {
 
             <button 
               onClick={handleDownloadCV}
-              className="bg-[#497adb] hover:bg-[#3a68c7] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105"
+              className="bg-[#588aef] hover:bg-[#4577e8] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 flex items-center gap-2 hover:scale-105"
             >
               <Download size={18} />
               Download CV
