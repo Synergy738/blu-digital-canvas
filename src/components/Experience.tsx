@@ -18,7 +18,7 @@ const Experience = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gray-800 p-8 rounded-xl border border-secondary hover:border-accent transition-all duration-300">
             <div className="flex items-start space-x-6 mb-6">
-              <div className="w-16 h-16 bg-gray-900 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 bg-gray-700 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Briefcase className="text-accent" size={24} />
               </div>
               <div className="flex-1">
