@@ -4,8 +4,8 @@ import { Download, Code2, Database, Shield } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { name: 'Java', logo: 'https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg' },
-    { name: 'C#', logo: 'https://banner2.cleanpng.com/20180831/iua/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-1713945971245.webp' },
+    { name: 'Java', logo: 'https://www.svgrepo.com/show/303388/java-4-logo.svg' },
+    { name: 'C#', logo: 'https://www.svgrepo.com/show/373533/csharp2.svg' },
     { name: 'Python', logo: 'https://www.citypng.com/public/uploads/preview/hd-python-logo-symbol-transparent-png-735811696257415dbkifcuokn.png' },
     { name: 'MySQL', logo: 'https://www.mysql.com/common/logos/logo-mysql-170x115.png' },
     { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
