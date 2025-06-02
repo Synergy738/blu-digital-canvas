@@ -15,7 +15,7 @@ const About = () => {
     { name: 'GitHub', logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' },
     { name: 'VS Code', logo: 'https://code.visualstudio.com/assets/images/code-stable.png' },
     { name: 'PHP', logo: 'https://www.php.net/images/logos/new-php-logo.svg' },
-    { name: 'Delphi', logo: 'https://static.cdnlogo.com/logos/d/33/delphi.svg' }
+    { name: 'Delphi', logo: 'https://www.logotypes101.com/logos/55/E0FD5CC6E93A59C0EF35D8A2A68B1D1A/delphi.png' }
   ];
 
   const handleDownloadCV = () => {
