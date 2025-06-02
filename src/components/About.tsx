@@ -66,18 +66,7 @@ const About = () => {
           {/* Right Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <p className="text-gray-300 leading-relaxed">
-                A full stack software developer with skills in cybersecurity, machine learning and
-                database management systems who has a passion for turning complex problems into
-                elegant solutions. I seek the challenge of creating desktop and web applications that
-                are not just functional but also visually appealing—the kind of apps that make you
-                say, "Wow, this is actually pretty good". In-person collaboration is what I strive for,
-                where I can bounce ideas off a team and really get to know the people I'm working
-                with. I'd like to bring all of who I am to the table, and that means finding a role that
-                lets me be myself: a confident, open-minded, and intelligent young coder who's ready
-                to make a real impact in the IT industry.
-
-              </p>
+              <p className="text-gray-300 leading-relaxed">A full stack software developer with skills in cybersecurity, machine learning and database management systems who has a passion for turning complex problems into elegant solutions. I seek the challenge of creating desktop and web applications that are not just functional but also visually appealing—the kind of apps that make you say, "Wow, this is actually pretty good". In-person collaboration is what I strive for, where I can bounce ideas off a team and really get to know the people I'm working with. I'd like to bring all of who I am to the table, and that means finding a role that lets me be myself: a confident, open-minded, and intelligent young coder who's ready to make a real impact in the IT industry.</p>
             </div>
 
             <button 
