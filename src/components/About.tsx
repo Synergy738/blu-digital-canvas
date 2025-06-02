@@ -67,10 +67,16 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed">
-                A software engineer and the modern-day architect of digital realms, I navigate the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, I compose symphonies of logic, my mind a labyrinth of algorithms and solutions.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                My canvas is a screen, a vast expanse where lines of code dance in intricate patterns, weaving the fabric of programs and applications. Each keystroke is a brushstroke, crafting intricate architectures and breathing life into innovative designs.
+                A full stack software developer with skills in cybersecurity, machine learning and
+                database management systems who has a passion for turning complex problems into
+                elegant solutions. I seek the challenge of creating desktop and web applications that
+                are not just functional but also visually appealing—the kind of apps that make you
+                say, "Wow, this is actually pretty good". In-person collaboration is what I strive for,
+                where I can bounce ideas off a team and really get to know the people I'm working
+                with. I'd like to bring all of who I am to the table, and that means finding a role that
+                lets me be myself: a confident, open-minded, and intelligent young coder who's ready
+                to make a real impact in the IT industry.
+
               </p>
             </div>
 
