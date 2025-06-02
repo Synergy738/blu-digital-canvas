@@ -114,10 +114,10 @@ const Certifications = () => {
     <section id="certifications" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-light mb-4">
-            Training & <span className="text-accent">Portfolio</span>
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Training & <span className="text-blue-400">Portfolio</span>
           </h2>
-          <p className="text-secondary max-w-2xl mx-auto">
+          <p className="text-gray-400 max-w-2xl mx-auto">
             My professional certifications and achievements from globally recognized institutions
           </p>
         </div>
@@ -130,8 +130,8 @@ const Certifications = () => {
               onClick={() => setSelectedFilter(institution)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedFilter === institution
-                  ? 'bg-accent text-primary'
-                  : 'bg-gray-700 text-secondary hover:bg-secondary'
+                  ? 'bg-blue-500 text-white'
+                  : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
               }`}
             >
               {institution}
@@ -146,7 +146,7 @@ const Certifications = () => {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-gray-900 p-6 rounded-xl hover:bg-gray-750 transition-all duration-300 hover:scale-105 group border border-secondary hover:border-accent cursor-pointer"
+              className="bg-gray-900 p-6 rounded-xl hover:bg-gray-750 transition-all duration-300 hover:scale-105 group border border-gray-700 hover:border-blue-500 cursor-pointer"
             >
               <div className="flex items-start space-x-4 mb-4">
                 <div className="w-16 h-16 bg-gray-800 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-110 transition-transform duration-300">
@@ -173,19 +173,19 @@ const Certifications = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-light mb-2 leading-tight group-hover:text-accent transition-colors">
+                  <h3 className="font-semibold text-white mb-2 leading-tight group-hover:text-blue-400 transition-colors">
                     {cert.title}
                   </h3>
-                  <p className="text-secondary text-sm mb-2">{cert.institution}</p>
-                  <div className="flex items-center text-accent text-sm">
+                  <p className="text-gray-400 text-sm mb-2">{cert.institution}</p>
+                  <div className="flex items-center text-blue-400 text-sm">
                     <Calendar size={14} className="mr-1" />
                     {cert.date}
                   </div>
                 </div>
-                <ExternalLink size={16} className="text-secondary group-hover:text-accent transition-colors" />
+                <ExternalLink size={16} className="text-gray-500 group-hover:text-blue-400 transition-colors" />
               </div>
-              <div className="border-t border-secondary pt-4">
-                <span className="text-accent text-sm font-medium">Certified</span>
+              <div className="border-t border-gray-700 pt-4">
+                <span className="text-blue-400 text-sm font-medium">Certified</span>
               </div>
             </a>
           ))}

@@ -43,13 +43,6 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-
-    /* Custom colors */
-    --accent-green: #00e58e;
-    --primary-dark: #262626;
-    --secondary-gray: #656565;
-    --text-light: #e5e5e5;
-    --deep-dark: #1a1a1a;
   }
 
   .dark {
@@ -97,71 +90,14 @@
   }
 
   body {
-    background-color: var(--deep-dark);
-    color: var(--text-light);
+    @apply bg-gray-800 text-white;
     font-family: 'Inter', sans-serif;
   }
 }
 
 @layer utilities {
   .bg-gray-750 {
-    background-color: #2a2a2a;
-  }
-  
-  .bg-gray-800 {
-    background-color: #1f1f1f;
-  }
-  
-  .bg-gray-900 {
-    background-color: var(--deep-dark);
-  }
-  
-  .text-accent {
-    color: var(--accent-green);
-  }
-  
-  .bg-accent {
-    background-color: var(--accent-green);
-  }
-  
-  .border-accent {
-    border-color: var(--accent-green);
-  }
-  
-  .hover\:bg-accent:hover {
-    background-color: var(--accent-green);
-  }
-  
-  .hover\:text-accent:hover {
-    color: var(--accent-green);
-  }
-  
-  .hover\:border-accent:hover {
-    border-color: var(--accent-green);
-  }
-  
-  .bg-primary {
-    background-color: var(--primary-dark);
-  }
-  
-  .bg-secondary {
-    background-color: var(--secondary-gray);
-  }
-  
-  .text-primary {
-    color: var(--primary-dark);
-  }
-  
-  .text-secondary {
-    color: var(--secondary-gray);
-  }
-  
-  .text-light {
-    color: var(--text-light);
-  }
-  
-  .border-secondary {
-    border-color: var(--secondary-gray);
+    background-color: rgb(55 65 81);
   }
 }
 
@@ -175,7 +111,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--secondary-gray);
+  background: #374151;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -190,27 +126,13 @@ html {
 /* Logo animation */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 229, 142, 0.3);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(0, 229, 142, 0.5);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
   }
 }
 
 .logo-pulse {
   animation: pulse-glow 2s ease-in-out infinite;
-}
-
-/* Glow effect for hero text */
-@keyframes text-glow {
-  0%, 100% {
-    text-shadow: 0 0 10px rgba(0, 229, 142, 0.3), 0 0 20px rgba(0, 229, 142, 0.2);
-  }
-  50% {
-    text-shadow: 0 0 20px rgba(0, 229, 142, 0.5), 0 0 30px rgba(0, 229, 142, 0.3);
-  }
-}
-
-.hero-glow {
-  animation: text-glow 3s ease-in-out infinite;
 }
