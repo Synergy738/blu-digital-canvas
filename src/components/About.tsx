@@ -4,18 +4,18 @@ import { Download, Code2, Database, Shield } from 'lucide-react';
 
 const About = () => {
   const skills = [
-    { name: 'Java', logo: 'https://www.oracle.com/a/ocom/img/cb71-java-logo.png' },
-    { name: 'C#', logo: 'https://miro.medium.com/v2/resize:fit:920/1*eAO0V-jmx9_DaZdtVbs1Gw.png' },
+    { name: 'Java', logo: 'https://1000logos.net/wp-content/uploads/2020/09/Java-Emblem.jpg' },
+    { name: 'C#', logo: 'https://banner2.cleanpng.com/20180831/iua/kisspng-c-programming-language-logo-microsoft-visual-stud-atlas-portfolio-1713945971245.webp' },
     { name: 'Python', logo: 'https://www.citypng.com/public/uploads/preview/hd-python-logo-symbol-transparent-png-735811696257415dbkifcuokn.png' },
     { name: 'MySQL', logo: 'https://www.mysql.com/common/logos/logo-mysql-170x115.png' },
     { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
-    { name: 'HTML', logo: 'https://cdn.iconscout.com/icon/free/png-256/free-html-5-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945001.png' },
+    { name: 'HTML', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' },
     { name: 'CSS', logo: 'https://cdn.iconscout.com/icon/free/png-256/free-css3-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-brand-vol-5-pack-logos-icons-2945020.png' },
     { name: 'WordPress', logo: 'https://s.w.org/style/images/about/WordPress-logotype-wmark.png' },
     { name: 'GitHub', logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' },
     { name: 'VS Code', logo: 'https://code.visualstudio.com/assets/images/code-stable.png' },
     { name: 'PHP', logo: 'https://www.php.net/images/logos/new-php-logo.svg' },
-    { name: 'Delphi', logo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.logotypes101.com%2Flogo%2Fdelphi-1&psig=AOvVaw1GfFhuDTCcmyhaHA-0akIz&ust=1748930798975000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNCB4Y2J0o0DFQAAAAAdAAAAABAE' }
+    { name: 'Delphi', logo: 'https://www.logotypes101.com/logos/55/E0FD5CC6E93A59C0EF35D8A2A68B1D1A/delphi.png' }
   ];
 
   const handleDownloadCV = () => {
