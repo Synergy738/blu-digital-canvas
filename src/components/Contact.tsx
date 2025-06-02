@@ -180,16 +180,6 @@ const Contact = () => {
                 </Button>
               </div>
             </form>
-
-            {/* Contact Info - Only Phone Number */}
-            <div className="mt-12 pt-8 border-t border-gray-700 animate-fade-in" style={{ animationDelay: '1.1s' }}>
-              <div className="flex justify-center">
-                <div className="flex items-center gap-2 text-gray-400">
-                  <Phone size={16} />
-                  <span>+27 64 766 9310</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
