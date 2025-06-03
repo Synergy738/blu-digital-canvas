@@ -27,6 +27,7 @@ const Header = () => {
     { label: 'Home', id: 'hero' },
     { label: 'Services', id: 'services' },
     { label: 'About me', id: 'about' },
+    { label: 'Skills', id: 'skills' },
     { label: 'Certifications', id: 'certifications' },
     { label: 'Experience', id: 'experience' },
   ];
@@ -47,7 +48,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`${index === 0 ? 'text-[#00e58e]' : 'text-gray-300'} hover:text-[#00e58e] transition-colors duration-300 font-medium`}
+                className={`${index === 0 ? 'text-[#588aef]' : 'text-gray-300'} hover:text-[#588aef] transition-colors duration-300 font-medium`}
               >
                 {item.label}
               </button>
@@ -56,7 +57,7 @@ const Header = () => {
 
           <button
             onClick={() => scrollToSection('contact')}
-            className="hidden md:block bg-[#00e58e] hover:bg-[#00d17a] text-white px-6 py-2 rounded-md transition-colors duration-300"
+            className="hidden md:block bg-[#588aef] hover:bg-[#4577e8] text-white px-6 py-2 rounded-md transition-colors duration-300"
           >
             Hire Me
           </button>
@@ -77,14 +78,14 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-6 py-3 text-gray-300 hover:text-[#00e58e] transition-colors duration-300"
+                className="block w-full text-left px-6 py-3 text-gray-300 hover:text-[#588aef] transition-colors duration-300"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="w-full mt-4 mx-6 bg-[#00e58e] hover:bg-[#00d17a] text-white px-6 py-2 rounded-md transition-colors duration-300"
+              className="w-full mt-4 mx-6 bg-[#588aef] hover:bg-[#4577e8] text-white px-6 py-2 rounded-md transition-colors duration-300"
             >
               Hire Me
             </button>

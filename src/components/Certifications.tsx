@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import { Calendar, ExternalLink } from 'lucide-react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Certifications = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 600);
   const [selectedFilter, setSelectedFilter] = useState('All');
 
   const certifications = [
@@ -111,23 +112,29 @@ const Certifications = () => {
       date: "March 2022",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAvgtfX0uy-etp2UvMuD91cECrF7w-ULejmw&s",
       link: "https://www.linkedin.com/in/blu-dennis-b40136278/details/certifications/1748355840394/single-media-viewer/?profileId=ACoAAEOmreAB2_gnttlRHAEgbMxKIcSD7vZ-rWU",
-      category: "Stellenberg",
+      category: "High School",
       percentage: 90
     }
   ];
 
-  const institutions = ['All', 'Harvard', 'MIT', 'Georgia Tech', 'NYU', 'Oracle', 'Board Infinity', 'Stellenberg'];
+  const institutions = ['All', 'Harvard', 'MIT', 'Georgia Tech', 'NYU', 'Oracle', 'Board Infinity', 'High School'];
 
   const filteredCertifications = selectedFilter === 'All' 
     ? certifications 
     : certifications.filter(cert => cert.category === selectedFilter);
 
   return (
-    <section id="certifications" className="py-20 bg-gray-800">
+    <section 
+      ref={elementRef}
+      id="certifications" 
+      className={`py-20 bg-gray-800 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            <span className="text-[#00e58e]">Certifications</span>
+            <span className="bg-gradient-to-r from-[#588aef] to-[#7ba3f3] bg-clip-text text-transparent">Certifications</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             My professional certifications and achievements from globally recognized institutions
@@ -135,14 +142,16 @@ const Certifications = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           {institutions.map((institution) => (
             <button
               key={institution}
               onClick={() => setSelectedFilter(institution)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedFilter === institution
-                  ? 'bg-[#00e58e] text-white'
+                  ? 'bg-gradient-to-r from-[#588aef] to-[#7ba3f3] text-white shadow-lg shadow-[#588aef]/30'
                   : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-700'
               }`}
             >
@@ -158,7 +167,12 @@ const Certifications = () => {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#1a1a1a] p-6 rounded-xl hover:bg-gray-700 transition-all duration-300 hover:scale-105 group cursor-pointer"
+              className={`bg-[#1a1a1a] p-6 rounded-xl hover:bg-gray-700 transition-all duration-500 hover:scale-105 group cursor-pointer ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ 
+                transitionDelay: isVisible ? `${index * 100 + 500}ms` : '0ms'
+              }}
             >
               <div className="flex items-start space-x-4 mb-4">
                 <div className="w-16 h-16 bg-[#262626] rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-110 transition-transform duration-300">
@@ -185,32 +199,32 @@ const Certifications = () => {
                   />
                 </div>
                 <div className="flex-1">
-                  <h3 className="font-semibold text-white mb-2 leading-tight group-hover:text-[#00e58e] transition-colors text-sm">
+                  <h3 className="font-semibold text-white mb-2 leading-tight group-hover:text-[#588aef] transition-colors text-sm">
                     {cert.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-2">{cert.institution}</p>
-                  <div className="flex items-center text-[#00e58e] text-sm mb-2">
+                  <div className="flex items-center text-[#588aef] text-sm mb-2">
                     <Calendar size={14} className="mr-1" />
                     {cert.date}
                   </div>
                   {/* Percentage with animation */}
                   <div className="mb-2">
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-[#00e58e] text-sm font-medium">Score</span>
-                      <span className="text-[#00e58e] font-bold">{cert.percentage}%</span>
+                      <span className="text-[#588aef] text-sm font-medium">Score</span>
+                      <span className="text-[#588aef] font-bold">{cert.percentage}%</span>
                     </div>
                     <div className="w-full bg-gray-600 rounded-full h-2">
                       <div 
-                        className="bg-[#00e58e] h-2 rounded-full transition-all duration-1000 ease-out" 
+                        className="bg-[#588aef] h-2 rounded-full transition-all duration-1000 ease-out" 
                         style={{ width: `${cert.percentage}%` }}
                       ></div>
                     </div>
                   </div>
                 </div>
-                <ExternalLink size={16} className="text-gray-500 group-hover:text-[#00e58e] transition-colors" />
+                <ExternalLink size={16} className="text-gray-500 group-hover:text-[#588aef] transition-colors" />
               </div>
               <div className="border-t border-gray-700 pt-4">
-                <span className="text-[#00e58e] text-sm font-medium">Certified</span>
+                <span className="text-[#588aef] text-sm font-medium">Certified</span>
               </div>
             </a>
           ))}

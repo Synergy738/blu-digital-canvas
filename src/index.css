@@ -99,6 +99,14 @@
   .bg-gray-750 {
     background-color: rgb(55 65 81);
   }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#588aef] to-[#7ba3f3] bg-clip-text text-transparent;
+  }
+  
+  .gradient-button {
+    @apply bg-gradient-to-r from-[#588aef] to-[#7ba3f3] hover:from-[#4577e8] hover:to-[#6b9af2] shadow-lg shadow-[#588aef]/30;
+  }
 }
 
 html {
@@ -126,10 +134,10 @@ html {
 /* Logo animation */
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 229, 142, 0.3);
+    box-shadow: 0 0 20px rgba(88, 138, 239, 0.3);
   }
   50% {
-    box-shadow: 0 0 30px rgba(0, 229, 142, 0.5);
+    box-shadow: 0 0 30px rgba(88, 138, 239, 0.5);
   }
 }
 
@@ -145,4 +153,35 @@ html {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+/* Fade-in animation */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Gradient glow animation */
+@keyframes gradient-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(88, 138, 239, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(123, 163, 243, 0.5);
+  }
+}
+
+.gradient-glow {
+  animation: gradient-glow 3s ease-in-out infinite;
 }
