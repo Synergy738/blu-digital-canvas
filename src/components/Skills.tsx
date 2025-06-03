@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Skills = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 500);
+
   const skills = [
     { name: 'Java', logo: 'https://www.svgrepo.com/show/303388/java-4-logo.svg' },
     { name: 'C#', logo: 'https://www.svgrepo.com/show/373533/csharp2.svg' },
@@ -18,7 +21,13 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-[#1a1a1a]">
+    <section 
+      ref={elementRef}
+      id="skills" 
+      className={`py-20 bg-[#1a1a1a] transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
@@ -30,8 +39,16 @@ const Skills = () => {
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-          {skills.map((skill) => (
-            <div key={skill.name} className="bg-[#262626] p-6 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-105 group">
+          {skills.map((skill, index) => (
+            <div 
+              key={skill.name} 
+              className={`bg-[#262626] p-6 rounded-lg hover:bg-gray-700 transition-all duration-500 hover:scale-105 group ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ 
+                transitionDelay: isVisible ? `${index * 75}ms` : '0ms'
+              }}
+            >
               <div className="flex flex-col items-center gap-3">
                 <div className="w-16 h-16 flex items-center justify-center">
                   <img src={skill.logo} alt={skill.name} className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />

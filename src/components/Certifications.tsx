@@ -1,8 +1,9 @@
-
 import React, { useState } from 'react';
 import { Calendar, ExternalLink } from 'lucide-react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Certifications = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 600);
   const [selectedFilter, setSelectedFilter] = useState('All');
 
   const certifications = [
@@ -123,7 +124,13 @@ const Certifications = () => {
     : certifications.filter(cert => cert.category === selectedFilter);
 
   return (
-    <section id="certifications" className="py-20 bg-gray-800">
+    <section 
+      ref={elementRef}
+      id="certifications" 
+      className={`py-20 bg-gray-800 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -135,7 +142,9 @@ const Certifications = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className={`flex flex-wrap justify-center gap-4 mb-12 transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           {institutions.map((institution) => (
             <button
               key={institution}
@@ -158,7 +167,12 @@ const Certifications = () => {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#1a1a1a] p-6 rounded-xl hover:bg-gray-700 transition-all duration-300 hover:scale-105 group cursor-pointer"
+              className={`bg-[#1a1a1a] p-6 rounded-xl hover:bg-gray-700 transition-all duration-500 hover:scale-105 group cursor-pointer ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ 
+                transitionDelay: isVisible ? `${index * 100 + 500}ms` : '0ms'
+              }}
             >
               <div className="flex items-start space-x-4 mb-4">
                 <div className="w-16 h-16 bg-[#262626] rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-110 transition-transform duration-300">

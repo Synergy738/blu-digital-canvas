@@ -1,10 +1,18 @@
-
 import React from 'react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Experience = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 700);
+
   return (
-    <section id="experience" className="py-20 bg-gray-900">
+    <section 
+      ref={elementRef}
+      id="experience" 
+      className={`py-20 bg-gray-900 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -16,7 +24,9 @@ const Experience = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className="bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-300">
+          <div className={`bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`} style={{ transitionDelay: '300ms' }}>
             <div className="flex items-start space-x-6 mb-6">
               <div className="w-16 h-16 bg-[#1a1a1a] rounded-xl flex items-center justify-center flex-shrink-0">
                 <Briefcase className="text-[#588aef]" size={24} />

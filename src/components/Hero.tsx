@@ -1,8 +1,10 @@
-
 import React from 'react';
 import { Download, Code, Zap, Globe } from 'lucide-react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Hero = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 200);
+
   const scrollToServices = () => {
     const servicesSection = document.getElementById('services');
     if (servicesSection) {
@@ -15,7 +17,13 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative bg-gray-800 overflow-hidden">
+    <section 
+      ref={elementRef} 
+      id="hero" 
+      className={`min-h-screen flex items-center justify-center relative bg-gray-800 overflow-hidden transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       {/* Enhanced Background Design Elements */}
       <div className="absolute inset-0">
         {/* Floating geometric shapes */}

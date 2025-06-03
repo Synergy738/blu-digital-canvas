@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Phone, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,8 +5,10 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Contact = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 800);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -63,16 +64,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-800">
+    <section 
+      ref={elementRef}
+      id="contact" 
+      className={`py-20 bg-gray-800 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-in">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Hire Me</h2>
           <p className="text-gray-400">
             Cultivating Connections: Reach Out And Connect With Me
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-300 ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        }`}>
           <div className="bg-[#262626] p-8 rounded-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">

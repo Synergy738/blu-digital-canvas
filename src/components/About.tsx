@@ -1,14 +1,23 @@
 
 import React from 'react';
-import { Download, Code2, Database, Shield } from 'lucide-react';
+import { Download } from 'lucide-react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const About = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 400);
+
   const handleDownloadCV = () => {
     window.open('https://www.pnet.co.za/5/candidatecv/v1/candidates/10708141/profile/attachments/15519271', '_blank');
   };
 
   return (
-    <section id="about" className="py-20 bg-[#262626]">
+    <section 
+      ref={elementRef}
+      id="about" 
+      className={`py-20 bg-[#262626] transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
@@ -19,39 +28,32 @@ const About = () => {
           </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          {/* Tech Icons Visual - Centered */}
-          <div className="mb-16 flex justify-center">
-            <div className="w-full max-w-md h-80 bg-[#1a1a1a] rounded-2xl flex items-center justify-center relative overflow-hidden">
-              {/* Background patterns */}
-              <div className="absolute inset-0">
-                <div className="absolute top-10 left-10 w-20 h-20 border-2 border-[#588aef]/30 rounded-full"></div>
-                <div className="absolute bottom-10 right-10 w-16 h-16 bg-[#588aef]/20 rotate-45"></div>
-                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                  <div className="w-32 h-32 border-4 border-[#588aef]/40 rounded-2xl rotate-12"></div>
-                </div>
-              </div>
-              
-              {/* Tech Icons */}
-              <div className="relative z-10 grid grid-cols-2 gap-8">
-                <div className="w-24 h-24 bg-gradient-to-br from-[#588aef]/30 to-[#7ba3f3]/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                  <Code2 className="text-[#588aef]" size={40} />
-                </div>
-                <div className="w-24 h-24 bg-gradient-to-br from-[#588aef]/30 to-[#7ba3f3]/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                  <Database className="text-[#588aef]" size={40} />
-                </div>
-                <div className="w-24 h-24 bg-gradient-to-br from-[#588aef]/30 to-[#7ba3f3]/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                  <Shield className="text-[#588aef]" size={40} />
-                </div>
-                <div className="w-24 h-24 bg-gradient-to-br from-[#588aef]/30 to-[#7ba3f3]/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                  <div className="bg-gradient-to-r from-[#588aef] to-[#7ba3f3] bg-clip-text text-transparent font-bold text-2xl">AI</div>
-                </div>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Profile Image */}
+          <div className={`mb-12 flex justify-center transition-all duration-1000 delay-300 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#588aef]/20 to-[#7ba3f3]/20 rounded-2xl blur-xl"></div>
+              <div className="relative w-80 h-96 bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl overflow-hidden">
+                <img 
+                  src="/lovable-uploads/fada83be-694a-47a0-9125-2a1a9cab8a76.png" 
+                  alt="Blũ Dennis"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                />
+                
+                {/* Decorative elements */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#588aef] rounded-full shadow-lg shadow-[#588aef]/30"></div>
+                <div className="absolute -bottom-6 -left-6 w-8 h-8 border-2 border-[#588aef] rounded-full shadow-lg shadow-[#588aef]/30"></div>
+                <div className="absolute top-4 -left-4 w-6 h-6 bg-[#588aef] rounded-full opacity-60"></div>
               </div>
             </div>
           </div>
 
           {/* Content Below Image */}
-          <div className="text-center space-y-8">
+          <div className={`space-y-8 transition-all duration-1000 delay-500 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
             <div className="space-y-6">
               <p className="text-gray-300 leading-relaxed max-w-3xl mx-auto">A full stack software developer with skills in cybersecurity, machine learning and database management systems who has a passion for turning complex problems into elegant solutions. I seek the challenge of creating desktop and web applications that are not just functional but also visually appealing—the kind of apps that make you say, "Wow, this is actually pretty good". In-person collaboration is what I strive for, where I can bounce ideas off a team and really get to know the people I'm working with. I'd like to bring all of who I am to the table, and that means finding a role that lets me be myself: a confident, open-minded, and intelligent young coder who's ready to make a real impact in the IT industry.</p>
             </div>

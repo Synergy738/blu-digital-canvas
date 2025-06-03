@@ -1,8 +1,11 @@
 
 import React from 'react';
 import { Code, Globe, Shield, Brain, Server, Smartphone } from 'lucide-react';
+import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Services = () => {
+  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 300);
+
   const services = [
     {
       icon: <Globe className="text-[#588aef]" size={40} />,
@@ -37,7 +40,13 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-900">
+    <section 
+      ref={elementRef}
+      id="services" 
+      className={`py-20 bg-gray-900 transition-all duration-1000 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      }`}
+    >
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Services</h2>
@@ -50,7 +59,12 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-300 hover:scale-105 group"
+              className={`bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-500 hover:scale-105 group ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              }`}
+              style={{ 
+                transitionDelay: isVisible ? `${index * 100}ms` : '0ms'
+              }}
             >
               <div className="mb-6 group-hover:scale-110 transition-transform duration-300">
                 {service.icon}
