@@ -3,21 +3,6 @@ import React from 'react';
 import { Download, Code2, Database, Shield } from 'lucide-react';
 
 const About = () => {
-  const skills = [
-    { name: 'Java', logo: 'https://www.svgrepo.com/show/303388/java-4-logo.svg' },
-    { name: 'C#', logo: 'https://www.svgrepo.com/show/373533/csharp2.svg' },
-    { name: 'Python', logo: 'https://www.citypng.com/public/uploads/preview/hd-python-logo-symbol-transparent-png-735811696257415dbkifcuokn.png' },
-    { name: 'MySQL', logo: 'https://www.mysql.com/common/logos/logo-mysql-170x115.png' },
-    { name: 'JavaScript', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png' },
-    { name: 'HTML', logo: 'https://banner2.cleanpng.com/20180802/tpl/8d69cc4026ef9ea2fbc9f5972dd52fe7.webp' },
-    { name: 'CSS', logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' },
-    { name: 'WordPress', logo: 'https://s.w.org/style/images/about/WordPress-logotype-wmark.png' },
-    { name: 'GitHub', logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' },
-    { name: 'VS Code', logo: 'https://code.visualstudio.com/assets/images/code-stable.png' },
-    { name: 'PHP', logo: 'https://www.php.net/images/logos/new-php-logo.svg' },
-    { name: 'Delphi', logo: 'https://www.logotypes101.com/logos/55/E0FD5CC6E93A59C0EF35D8A2A68B1D1A/delphi.png' }
-  ];
-
   const handleDownloadCV = () => {
     window.open('https://www.pnet.co.za/5/candidatecv/v1/candidates/10708141/profile/attachments/15519271', '_blank');
   };
@@ -78,25 +63,6 @@ const About = () => {
               <Download size={18} />
               Download CV
             </button>
-
-            {/* Skills Section */}
-            <div className="mt-16">
-              <h3 className="text-2xl font-bold mb-8">
-                <span className="bg-gradient-to-r from-[#588aef] to-[#7ba3f3] bg-clip-text text-transparent">Skills</span>
-              </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-4xl mx-auto">
-                {skills.map((skill) => (
-                  <div key={skill.name} className="bg-[#1a1a1a] p-4 rounded-lg hover:bg-gray-700 transition-all duration-300 hover:scale-105 group">
-                    <div className="flex flex-col items-center gap-3">
-                      <div className="w-12 h-12 flex items-center justify-center">
-                        <img src={skill.logo} alt={skill.name} className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
-                      </div>
-                      <span className="text-white font-medium text-sm text-center">{skill.name}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
