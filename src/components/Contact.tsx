@@ -1,14 +1,13 @@
+
 import React, { useState } from 'react';
-import { Phone, Send } from 'lucide-react';
+import { Phone, Linkedin, Github, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
-import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Contact = () => {
-  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 800);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -63,14 +62,21 @@ const Contact = () => {
     }
   };
 
+  const socialLinks = [
+    {
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/in/blu-dennis-b40136278",
+      label: "LinkedIn"
+    },
+    {
+      icon: <Github size={20} />,
+      href: "https://github.com/Synergy738",
+      label: "GitHub"
+    }
+  ];
+
   return (
-    <section 
-      ref={elementRef}
-      id="contact" 
-      className={`py-20 bg-gray-800 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-    >
+    <section id="contact" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Hire Me</h2>
@@ -79,13 +85,11 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className={`max-w-4xl mx-auto transition-all duration-1000 delay-300 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}>
+        <div className="max-w-4xl mx-auto">
           <div className="bg-[#262626] p-8 rounded-xl">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <div>
                   <Label htmlFor="name" className="text-gray-300 mb-2 block">Name</Label>
                   <Input
                     id="name"
@@ -93,11 +97,11 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#588aef]"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                     placeholder="Your name"
                   />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <div>
                   <Label htmlFor="email" className="text-gray-300 mb-2 block">Email</Label>
                   <Input
                     id="email"
@@ -106,32 +110,32 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#588aef]"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                     placeholder="Your email"
                   />
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="animate-fade-in" style={{ animationDelay: '0.6s' }}>
+                <div>
                   <Label htmlFor="phone" className="text-gray-300 mb-2 block">Phone Number</Label>
                   <Input
                     id="phone"
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#588aef]"
+                    className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                     placeholder="Your phone number"
                   />
                 </div>
-                <div className="animate-fade-in" style={{ animationDelay: '0.7s' }}>
+                <div>
                   <Label htmlFor="service" className="text-gray-300 mb-2 block">Service Of Interest</Label>
                   <select
                     id="service"
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-[#1a1a1a] border border-gray-600 text-white placeholder-gray-400 focus:border-[#588aef] rounded-md px-3 py-2"
+                    className="w-full bg-[#1a1a1a] border border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e] rounded-md px-3 py-2"
                   >
                     <option value="">Select a service</option>
                     <option value="website">Website Development</option>
@@ -143,19 +147,19 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <div>
                 <Label htmlFor="timeline" className="text-gray-300 mb-2 block">Timeline</Label>
                 <Input
                   id="timeline"
                   name="timeline"
                   value={formData.timeline}
                   onChange={handleChange}
-                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#588aef]"
+                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                   placeholder="Project timeline"
                 />
               </div>
               
-              <div className="animate-fade-in" style={{ animationDelay: '0.9s' }}>
+              <div>
                 <Label htmlFor="message" className="text-gray-300 mb-2 block">Project Details...</Label>
                 <Textarea
                   id="message"
@@ -164,16 +168,16 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#588aef]"
+                  className="bg-[#1a1a1a] border-gray-600 text-white placeholder-gray-400 focus:border-[#00e58e]"
                   placeholder="Tell me about your project..."
                 />
               </div>
               
-              <div className="text-center animate-fade-in" style={{ animationDelay: '1s' }}>
+              <div className="text-center">
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-[#588aef] hover:bg-[#4577e8] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
+                  className="bg-[#00e58e] hover:bg-[#00d17a] text-white px-8 py-3 rounded-md font-medium transition-all duration-300 hover:scale-105"
                 >
                   {isSubmitting ? (
                     <>
@@ -189,6 +193,33 @@ const Contact = () => {
                 </Button>
               </div>
             </form>
+
+            {/* Contact Info and Social Links */}
+            <div className="mt-12 pt-8 border-t border-gray-700">
+              <div className="flex flex-col items-center gap-6">
+                {/* Phone Number - Centered */}
+                <div className="flex items-center gap-2 text-gray-400">
+                  <Phone size={16} />
+                  <span>+27 64 766 9310</span>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-6">
+                  {socialLinks.map((social, index) => (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#00e58e] transition-all duration-300"
+                      aria-label={social.label}
+                    >
+                      {social.icon}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

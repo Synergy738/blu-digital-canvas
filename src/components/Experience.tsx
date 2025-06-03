@@ -1,22 +1,14 @@
+
 import React from 'react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
-import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const Experience = () => {
-  const { elementRef, isVisible } = useFadeInOnScroll(0.1, 700);
-
   return (
-    <section 
-      ref={elementRef}
-      id="experience" 
-      className={`py-20 bg-gray-900 transition-all duration-1000 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}
-    >
+    <section id="experience" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Professional <span className="text-[#588aef]">Experience</span>
+            Professional <span className="text-[#00e58e]">Experience</span>
           </h2>
           <p className="text-gray-400">
             My professional journey and work experience
@@ -24,12 +16,10 @@ const Experience = () => {
         </div>
         
         <div className="max-w-4xl mx-auto">
-          <div className={`bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`} style={{ transitionDelay: '300ms' }}>
+          <div className="bg-[#1a1a1a] p-8 rounded-xl hover:bg-gray-800 transition-all duration-300">
             <div className="flex items-start space-x-6 mb-6">
-              <div className="w-16 h-16 bg-[#1a1a1a] rounded-xl flex items-center justify-center flex-shrink-0">
-                <Briefcase className="text-[#588aef]" size={24} />
+              <div className="w-16 h-16 bg-[#262626] rounded-xl flex items-center justify-center flex-shrink-0">
+                <Briefcase className="text-[#00e58e]" size={24} />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">
@@ -39,7 +29,7 @@ const Experience = () => {
                   <MapPin size={16} className="mr-2" />
                   <span className="font-medium">Superb Digital</span>
                 </div>
-                <div className="flex items-center text-[#588aef] mb-4">
+                <div className="flex items-center text-[#00e58e] mb-4">
                   <Calendar size={16} className="mr-2" />
                   <span>April 2025 - Present</span>
                 </div>
@@ -55,7 +45,7 @@ const Experience = () => {
                 {['WordPress', 'PHP', 'CSS', 'HTML', 'TypeScript', 'Elementor', 'Solid Security'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-[#1a1a1a] text-[#588aef] text-sm rounded-full hover:bg-gray-700 transition-colors"
+                    className="px-4 py-2 bg-[#1a1a1a] text-[#00e58e] text-sm rounded-full hover:bg-gray-700 transition-colors"
                   >
                     {tech}
                   </span>
