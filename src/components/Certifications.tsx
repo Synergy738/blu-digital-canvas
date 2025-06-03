@@ -111,12 +111,12 @@ const Certifications = () => {
       date: "March 2022",
       logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAvgtfX0uy-etp2UvMuD91cECrF7w-ULejmw&s",
       link: "https://www.linkedin.com/in/blu-dennis-b40136278/details/certifications/1748355840394/single-media-viewer/?profileId=ACoAAEOmreAB2_gnttlRHAEgbMxKIcSD7vZ-rWU",
-      category: "Stellenberg",
+      category: "High School",
       percentage: 90
     }
   ];
 
-  const institutions = ['All', 'Harvard', 'MIT', 'Georgia Tech', 'NYU', 'Oracle', 'Board Infinity', 'Stellenberg'];
+  const institutions = ['All', 'Harvard', 'MIT', 'Georgia Tech', 'NYU', 'Oracle', 'Board Infinity', 'High School'];
 
   const filteredCertifications = selectedFilter === 'All' 
     ? certifications 
@@ -127,7 +127,7 @@ const Certifications = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            <span className="text-[#588aef]">Certifications</span>
+            <span className="bg-gradient-to-r from-[#588aef] to-[#7ba3f3] bg-clip-text text-transparent">Certifications</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             My professional certifications and achievements from globally recognized institutions
@@ -142,7 +142,7 @@ const Certifications = () => {
               onClick={() => setSelectedFilter(institution)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
                 selectedFilter === institution
-                  ? 'bg-[#588aef] text-white'
+                  ? 'bg-gradient-to-r from-[#588aef] to-[#7ba3f3] text-white shadow-lg shadow-[#588aef]/30'
                   : 'bg-[#1a1a1a] text-gray-300 hover:bg-gray-700'
               }`}
             >
