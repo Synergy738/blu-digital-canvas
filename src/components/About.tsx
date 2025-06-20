@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Download } from 'lucide-react';
+import { Download, Code, Terminal, Cpu } from 'lucide-react';
 import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
 
 const About = () => {
@@ -29,18 +29,70 @@ const About = () => {
         </div>
         
         <div className="max-w-4xl mx-auto text-center">
-          {/* Profile Image */}
+          {/* Coding-themed Visual Element */}
           <div className={`mb-12 flex justify-center transition-all duration-1000 delay-300 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
             <div className="relative">
+              {/* Main container with gradient border effect */}
               <div className="absolute -inset-4 bg-gradient-to-r from-[#588aef]/20 to-[#7ba3f3]/20 rounded-2xl blur-xl"></div>
-              <div className="relative w-80 h-96 bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl overflow-hidden">
-                <img 
-                  src="/lovable-uploads/fada83be-694a-47a0-9125-2a1a9cab8a76.png" 
-                  alt="Blũ Dennis"
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
-                />
+              <div className="relative w-80 h-96 bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl overflow-hidden border border-gray-600">
+                
+                {/* Code editor mockup */}
+                <div className="h-full flex flex-col">
+                  {/* Title bar */}
+                  <div className="bg-gray-800 border-b border-gray-600 px-4 py-3 flex items-center gap-2">
+                    <div className="flex gap-1">
+                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                    </div>
+                    <span className="text-gray-300 text-sm ml-2">Developer.tsx</span>
+                  </div>
+                  
+                  {/* Code content */}
+                  <div className="flex-1 p-4 font-mono text-sm">
+                    <div className="space-y-2">
+                      <div className={`transition-all duration-1000 delay-500 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
+                        <span className="text-purple-400">const</span>{' '}
+                        <span className="text-blue-400">developer</span>{' '}
+                        <span className="text-white">=</span>{' '}
+                        <span className="text-green-400">{'{'}</span>
+                      </div>
+                      <div className={`ml-4 transition-all duration-1000 delay-700 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
+                        <span className="text-red-400">name</span>
+                        <span className="text-white">:</span>{' '}
+                        <span className="text-yellow-400">'Blũ Dennis'</span>
+                        <span className="text-white">,</span>
+                      </div>
+                      <div className={`ml-4 transition-all duration-1000 delay-900 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
+                        <span className="text-red-400">role</span>
+                        <span className="text-white">:</span>{' '}
+                        <span className="text-yellow-400">'Full Stack Dev'</span>
+                        <span className="text-white">,</span>
+                      </div>
+                      <div className={`ml-4 transition-all duration-1000 delay-1100 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
+                        <span className="text-red-400">passion</span>
+                        <span className="text-white">:</span>{' '}
+                        <span className="text-yellow-400">'Problem Solving'</span>
+                      </div>
+                      <div className={`transition-all duration-1000 delay-1300 ${isVisible ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
+                        <span className="text-green-400">{'}'}</span>
+                      </div>
+                    </div>
+                    
+                    {/* Floating icons */}
+                    <div className="absolute top-20 right-6">
+                      <Code className={`w-8 h-8 text-[#588aef] transition-all duration-1000 delay-600 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} style={{animation: isVisible ? 'float 6s ease-in-out infinite' : 'none'}} />
+                    </div>
+                    <div className="absolute bottom-20 left-6">
+                      <Terminal className={`w-6 h-6 text-[#7ba3f3] transition-all duration-1000 delay-800 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} style={{animation: isVisible ? 'float 6s ease-in-out infinite 2s' : 'none'}} />
+                    </div>
+                    <div className="absolute top-32 left-8">
+                      <Cpu className={`w-5 h-5 text-[#588aef] transition-all duration-1000 delay-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`} style={{animation: isVisible ? 'float 6s ease-in-out infinite 4s' : 'none'}} />
+                    </div>
+                  </div>
+                </div>
                 
                 {/* Decorative elements */}
                 <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#588aef] rounded-full shadow-lg shadow-[#588aef]/30"></div>
@@ -50,7 +102,7 @@ const About = () => {
             </div>
           </div>
 
-          {/* Content Below Image */}
+          {/* Content Below Coding Element */}
           <div className={`space-y-8 transition-all duration-1000 delay-500 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Calendar, ExternalLink } from 'lucide-react';
 import { useFadeInOnScroll } from '@/hooks/useFadeInOnScroll';
@@ -65,7 +66,7 @@ const Certifications = () => {
       title: "Introduction to Computational Thinking and Data Science",
       institution: "Massachusetts Institute of Technology",
       date: "May 2023",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgwnjvsTyoRhtimgqhAREgWBsJXLP-d83gQ&s",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/MIT_Seal.svg/1200px-MIT_Seal.svg.png",
       link: "https://courses.edx.org/certificates/99799a611aa140cea73e1494fafa0c02",
       category: "MIT",
       percentage: 94
@@ -74,7 +75,7 @@ const Certifications = () => {
       title: "Introduction to Computer Science and Programming Using Python",
       institution: "Massachusetts Institute of Technology", 
       date: "March 2023",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJgwnjvsTyoRhtimgqhAREgWBsJXLP-d83gQ&s",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/MIT_Seal.svg/1200px-MIT_Seal.svg.png",
       link: "https://courses.edx.org/certificates/3fe39b587565472e98db7199e96c40e8",
       category: "MIT",
       percentage: 88
@@ -83,7 +84,7 @@ const Certifications = () => {
       title: "Introduction to Cyber Security Specialization",
       institution: "NYU | Tandon School of Engineering",
       date: "February 2024",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-Cib2AYVttx1xNFkyJgjKTt6t9f2uyjlHw&s",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/New_York_University_Seal.svg/1200px-New_York_University_Seal.svg.png",
       link: "https://coursera.org/share/70a144b9856231e090442005500994e2",
       category: "NYU",
       percentage: 87
@@ -101,7 +102,7 @@ const Certifications = () => {
       title: "Oracle Certified Foundations Associate",
       institution: "Oracle x On The Ball College",
       date: "June 2024",
-      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj9QfrMpx8Zv9FKYFuDhWZhXe79qeTu_juBA&s",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/1200px-Oracle_logo.svg.png",
       link: "https://www.linkedin.com/in/blu-dennis-b40136278/details/certifications/1730727005936/single-media-viewer/?profileId=ACoAAEOmreAB2_gnttlRHAEgbMxKIcSD7vZ-rWU",
       category: "Oracle",
       percentage: 95
@@ -114,10 +115,19 @@ const Certifications = () => {
       link: "https://www.linkedin.com/in/blu-dennis-b40136278/details/certifications/1748355840394/single-media-viewer/?profileId=ACoAAEOmreAB2_gnttlRHAEgbMxKIcSD7vZ-rWU",
       category: "High School",
       percentage: 90
+    },
+    {
+      title: "CEPFM365C: Prompt Engineering for Microsoft 365 Copilot",
+      institution: "Microsoft",
+      date: "June 2025",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+      link: "https://courses.edx.org/certificates/1b1cbc012d5c47a28c2ededcf515f84a",
+      category: "Microsoft",
+      percentage: 100
     }
   ];
 
-  const institutions = ['All', 'Harvard', 'MIT', 'Georgia Tech', 'NYU', 'Oracle', 'Board Infinity', 'High School'];
+  const institutions = ['All', 'Harvard', 'MIT', 'Georgia Tech', 'NYU', 'Oracle', 'Board Infinity', 'Microsoft', 'High School'];
 
   const filteredCertifications = selectedFilter === 'All' 
     ? certifications 
@@ -175,11 +185,11 @@ const Certifications = () => {
               }}
             >
               <div className="flex items-start space-x-4 mb-4">
-                <div className="w-16 h-16 bg-[#262626] rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-[#262626] rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
                   <img 
                     src={cert.logo} 
                     alt={`${cert.institution} logo`}
-                    className="w-12 h-12 object-contain"
+                    className="w-12 h-12 object-contain transition-transform duration-300"
                     onError={(e) => {
                       const fallbacks: { [key: string]: string } = {
                         'Harvard University': '🎓',
@@ -188,7 +198,8 @@ const Certifications = () => {
                         'Board Infinity': '🚀',
                         'Georgia Tech': '🐝',
                         'Massachusetts Institute of Technology': '⚛️',
-                        'Stellenberg High School': '🏫'
+                        'Stellenberg High School': '🏫',
+                        'Microsoft': '🔷'
                       };
                       (e.target as HTMLImageElement).style.display = 'none';
                       const fallbackDiv = document.createElement('div');

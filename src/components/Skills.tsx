@@ -51,7 +51,7 @@ const Skills = () => {
             >
               <div className="flex flex-col items-center gap-3">
                 <div className="w-16 h-16 flex items-center justify-center">
-                  <img src={skill.logo} alt={skill.name} className="w-14 h-14 object-contain group-hover:scale-110 transition-transform duration-300" />
+                  <img src={skill.logo} alt={skill.name} className="w-14 h-14 object-contain transition-transform duration-300" />
                 </div>
                 <span className="text-white font-medium text-sm text-center">{skill.name}</span>
               </div>
